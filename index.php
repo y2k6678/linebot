@@ -31,12 +31,7 @@ if (!is_null($events['events'])) {
 				'type' => 'text',
 				'text' => "hello"
 			];
-			if($text == "สวัสดี"){
-                            
-				$messages = [
-				'type' => 'text',
-				'text' => "ดีครับ"
-			];
+			
 
 
 
