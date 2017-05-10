@@ -31,13 +31,7 @@ if (!is_null($events['events'])) {
 				'type' => 'text',
 				'text' => "hello"
 			]; 	
-			if($text == "K"){
-                            
-				$messages = [
-				'type' => 'text',
-				'text' => "we"
-			]; 
-
+			
 
 
 			}
