@@ -33,14 +33,16 @@ if (!is_null($events['events'])) {
 			];		
 
 
-			}else($text == "K"){
+			}
+			if($text == "K"){
                             
 				$messages = [
 				'type' => 'text',
 				'text' => "we"
-			];
+			];		
+
+
 			}
-			
 			
 
 			// Make a POST Request to Messaging API to reply to sender
