@@ -33,6 +33,12 @@ if (!is_null($events['events'])) {
 			];		
 
 
+			}else($text == "K"){
+                            
+				$messages = [
+				'type' => 'text',
+				'text' => "we"
+			];
 			}
 			
 			
