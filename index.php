@@ -31,7 +31,12 @@ if (!is_null($events['events'])) {
 				'type' => 'text',
 				'text' => "hello"
 			];
-			
+			if($text == "Help"){
+                            
+				$messages = [
+				'type' => 'text',
+				'text' => "ช่วยเหลือ"
+			];
 
 
 
