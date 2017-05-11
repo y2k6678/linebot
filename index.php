@@ -30,19 +30,26 @@ if (!is_null($events['events'])) {
 				$messages = [
 				'type' => 'text',
 				'text' => "hello"
-			];		
-
+			];
 
 			}
-			if($text == "K"){
+			if($text == "รูป"){
                             
 				$messages = [
 				'type' => 'text',
-				'text' => "we"
-			];		
-
-
+				'text' => "http://sand.96.lt/images/q.jpg"
+			];	
 			}
+			//55
+			//if($text == "image"){
+                            
+			//	$messages = [
+			//	'type' => 'images',
+//'text' => "http://sand.96.lt/images/q.jpg"
+			];	
+			}
+			///55
+			
 			
 
 			// Make a POST Request to Messaging API to reply to sender
