@@ -40,15 +40,18 @@ if (!is_null($events['events'])) {
 				'text' => "http://sand.96.lt/images/q.jpg"
 			];	
 			}
-			//55
-			//if($text == "image"){
+			
+			
+			if($text == "image"){
                             
-			//	$messages = [
-			//	'type' => 'images',
-//'text' => "http://sand.96.lt/images/q.jpg"
-			//];	
-			//}
-			///55
+				$messages = [
+				$img_url = "http://sand.96.lt/images/q.jpg";
+				$outputText = new LINE\LINEBot\MessageBuilder\ImageMessageBuilder($img_url, $img_url);
+				$response = $bot->replyMessage($event->getReplyToken(), $outputText);
+			
+			];	
+			}
+						
 			
 			
 
