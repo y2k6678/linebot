@@ -46,8 +46,8 @@ if (!is_null($events['events'])) {
 			//	$messages = [
 			//	'type' => 'images',
 //'text' => "http://sand.96.lt/images/q.jpg"
-			];	
-			}
+			//];	
+			//}
 			///55
 			
 			
