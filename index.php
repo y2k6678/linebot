@@ -42,7 +42,7 @@ if (!is_null($events['events'])) {
 			}
 			
 			
-			if($text == "image"){
+			/*if($text == "image"){
                             
 				$messages = [
 				$img_url = "http://sand.96.lt/images/q.jpg";
@@ -50,7 +50,7 @@ if (!is_null($events['events'])) {
 				$response = $bot->replyMessage($event->getReplyToken(), $outputText);
 			
 			];	
-			}
+			}*/
 						
 			
 			
