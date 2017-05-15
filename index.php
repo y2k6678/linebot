@@ -43,9 +43,9 @@ if (!is_null($events['events'])) {
 			if($text == "ภาพ"){
                             
 				$messages = [
-				'type' => 'image',
-				'originalContentUrl' => "http://sand.96.lt/images/q.jpg",
-				'previewImageUrl' => "http://sand.96.lt/images/q.jpg"
+					"type": "image",
+					"originalContentUrl": "http://sand.96.lt/images/q.jpg",
+    					"previewImageUrl": "http://sand.96.lt/images/q.jpg"
 
 			];	
 			}
