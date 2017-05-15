@@ -40,7 +40,15 @@ if (!is_null($events['events'])) {
 				'text' => "http://sand.96.lt/images/q.jpg"
 			];	
 			}
-			
+			if($text == "ภาพ"){
+                            
+				$messages = [
+				'type' => 'image',
+				'originalContentUrl': 'http://sand.96.lt/images/q.jpg',
+				'previewImageUrl': 'http://sand.96.lt/images/q.jpg'
+
+			];	
+			}
 			
 			/*if($text == "image"){
                             
