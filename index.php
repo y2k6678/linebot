@@ -6,7 +6,7 @@ $content = file_get_contents('php://input');
 // Parse JSON
 $events = json_decode($content, true);
 // Validate parsed JSON data
-$temp = file_get_contents('https://api.thingspeak.com/channels/262354/fields/1/last.txt');
+$Light = file_get_contents('https://api.thingspeak.com/channels/262354/fields/1/last.txt');
 
 //convert
 if (!is_null($events['events'])) {
@@ -28,11 +28,11 @@ if (!is_null($events['events'])) {
 
 					// "text"
 			];
-			if($text == "w"){
+			if($text == "แสง"){
 				
 				$messages = [
 				'type' => 'text',
-				'text' => $temp
+				'text' => $Light
   	
 			];
 			}	
