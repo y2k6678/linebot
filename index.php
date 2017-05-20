@@ -29,7 +29,20 @@ if (!is_null($events['events'])) {
 				
 				$messages = [
 				'type' => 'text',
-				'text' => <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/262354/charts/1?bgcolor=%23ffffff&color=%23d62020&days=1&dynamic=true&results=60&timescale=10&type=line"></iframe>
+				'text' => var p;
+        //เปลี่ยนแค่เลข channel
+  $.getJSON('https://api.thingspeak.com/channels/24xxxx/feed/last.json?callback=?', function(data) {
+  
+  // get the data point
+  p = data.field1;   // เลือก filed ที่ต้องการ
+ 
+  if (p)
+  {
+   //p = Math.round((p / 1023) * 100);
+   displayData(p);
+  }
+ 
+  });
 					
 			];
 			}	
