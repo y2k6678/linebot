@@ -29,7 +29,7 @@ if (!is_null($events['events'])) {
 				
 				$messages = [
 				'type' => 'text',
-				'text' => "https://api.thingspeak.com/channels/262354/fields/1/last.txt"
+				'text' => <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/262354/charts/1?bgcolor=%23ffffff&color=%23d62020&days=1&dynamic=true&results=60&timescale=10&type=line"></iframe>
 					
 			];
 			}	
