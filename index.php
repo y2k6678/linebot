@@ -27,8 +27,8 @@ if (!is_null($events['events'])) {
 				
 				$messages = [
 				'type' => 'text',
-				'text' => $.getJSON('https://api.thingspeak.com/channels/262354/feed/last.json?callback=?', function(data) {
-  						 p = data.field1;
+				'text' => $Light = file_get_contents('https://api.thingspeak.com/channels/262354/fields/1/last.txt');
+					echo "Light is = ".$Light."<br>";
 			];
 			}	
 			if($text == "HI"){
