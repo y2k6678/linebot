@@ -29,20 +29,8 @@ if (!is_null($events['events'])) {
 				
 				$messages = [
 				'type' => 'text',
-				'text' => var p;
-        //เปลี่ยนแค่เลข channel
-  $.getJSON('https://api.thingspeak.com/channels/24xxxx/feed/last.json?callback=?', function(data) {
-  
-  // get the data point
-  p = data.field1;   // เลือก filed ที่ต้องการ
- 
-  if (p)
-  {
-   //p = Math.round((p / 1023) * 100);
-   displayData(p);
-  }
- 
-  });
+				'text' => $temp = file_get_contents('https://api.thingspeak.com/channels/24xxxx/fields/1/last.txt');
+   
 					
 			];
 			}	
