@@ -23,15 +23,14 @@ if (!is_null($events['events'])) {
 
 					// "text"
 			];
-			if($text == "สภาพอากาศ"){
+			if($text == "W"){
+				
 				$messages = [
-				'type' => 'text'
-				'text' => <?php $temp = file_get_contents('https://api.thingspeak.com/channels/262354/fields/1/last.txt');
-					echo "temp is = ".$temp."<br>";
-					> 			
-				];
-			}
-					
+				'type' => 'text',
+				'text' => $.getJSON('https://api.thingspeak.com/channels/262354/feed/last.json?callback=?', function(data) {
+  						 p = data.field1;
+			];
+			}	
 			if($text == "HI"){
                             
 				$messages = [
