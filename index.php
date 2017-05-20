@@ -16,8 +16,8 @@ if (!is_null($events['events'])) {
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 			
-			//
-			$Light = file_get_contents('https://api.thingspeak.com/channels/262354/fields/1/last.txt');
+			
+			
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
@@ -29,7 +29,7 @@ if (!is_null($events['events'])) {
 				
 				$messages = [
 				'type' => 'text',
-				'text' => 'Light'
+				'text' => "https://api.thingspeak.com/channels/262354/fields/1/last.txt"
 					
 			];
 			}	
