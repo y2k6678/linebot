@@ -25,7 +25,7 @@ if (!is_null($events['events'])) {
 
 					// "text"
 			];
-			if($text == "W"){
+			if($text == "w"){
 				
 				$messages = [
 				'type' => 'text',
