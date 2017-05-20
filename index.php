@@ -7,7 +7,7 @@ $content = file_get_contents('php://input');
 $events = json_decode($content, true);
 // Validate parsed JSON data
 $temp = file_get_contents('https://api.thingspeak.com/channels/262354/fields/1/last.txt');
-$convert = (string) $temp
+
 //convert
 if (!is_null($events['events'])) {
 	// Loop through each event
@@ -32,7 +32,7 @@ if (!is_null($events['events'])) {
 				
 				$messages = [
 				'type' => 'text',
-				'text' => $convert
+				'text' => $temp
   	
 			];
 			}	
