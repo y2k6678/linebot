@@ -29,7 +29,8 @@ if (!is_null($events['events'])) {
 				
 				$messages = [
 				'type' => 'text',
-				'text' => $.getJSON('https://api.thingspeak.com/channels/24xxxx/fields/1/last.txt');
+				'text' => $temp = file_get_contents('https://api.thingspeak.com/channels/262354/fields/1/last.txt');
+					 echo "$temp" ;
    
 					
 			];
