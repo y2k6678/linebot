@@ -55,8 +55,8 @@ if (!is_null($events['events'])) {
                             
 				$messages = [
 				'type' => 'image',
-				'originalContentUrl' => "https://i.imgur.com/t9i6cMv.jpg",
-    				'previewImageUrl' => "https://i.imgur.com/t9i6cMv.jpg"
+				'originalContentUrl' => "https://sand.96.lt/images/5.jpg",
+    				'previewImageUrl' => "https://sand.96.lt/images/5.jpg"
 
 			];	
 			}
