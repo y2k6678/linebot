@@ -57,8 +57,8 @@ if (!is_null($events['events'])) {
                             
 				$messages = [
 				'type' => 'image',
-				'originalContentUrl' => "https://www.lachambre.in.th/uploads/001.png",
-    				'previewImageUrl' => "https://www.lachambre.in.th/uploads/001.png"
+				'originalContentUrl' => "https://www.lachambre.in.th/uploads/tux.jpg",
+    				'previewImageUrl' => "https://www.lachambre.in.th/uploads/tux.jpg"
 
 			];	
 			}
