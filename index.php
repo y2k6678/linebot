@@ -47,8 +47,10 @@ if (!is_null($events['events'])) {
 			if($text == "รูป"){
                             
 				$messages = [
-				'type' => 'text',
-				'text' => "https://sand.96.lt/images/q.jpg"
+				'type' => 'image',
+				'originalContentUrl' => "https://www.lachambre.in.th/uploads/001.png",
+    				'previewImageUrl' => "https://www.lachambre.in.th/uploads/001.png"
+
 			];	
 			}
 			if($text == "ภาพ"){
