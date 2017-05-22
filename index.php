@@ -48,15 +48,15 @@ if (!is_null($events['events'])) {
                             
 				$messages = [
 				'type' => 'text',
-				'text' => "http://sand.96.lt/images/q.jpg"
+				'text' => "https://sand.96.lt/images/q.jpg"
 			];	
 			}
 			if($text == "ภาพ"){
                             
 				$messages = [
 				'type' => 'image',
-				'originalContentUrl' => "http://i.imgur.com/t9i6cMv.jpg",
-    				'previewImageUrl' => "http://i.imgur.com/t9i6cMv.jpg"
+				'originalContentUrl' => "https://i.imgur.com/t9i6cMv.jpg",
+    				'previewImageUrl' => "https://i.imgur.com/t9i6cMv.jpg"
 
 			];	
 			}
