@@ -62,6 +62,15 @@ if (!is_null($events['events'])) {
 
 			];	
 			}
+			if($text == "ภาพแซน"){
+                            
+				$messages = [
+				'type' => 'image',
+				'originalContentUrl' => "https://i.imgur.com/kaWhCJl.jpg",
+    				'previewImageUrl' => "https://i.imgur.com/kaWhCJl.jpg"
+
+			];	
+			}
 			
 			/*if($text == "image"){
                             
