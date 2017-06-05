@@ -70,13 +70,12 @@ if (!is_null($events['events'])) {
     				'previewImageUrl' => "https://i.imgur.com/kaWhCJl.jpg"
 
 			];	
-			 }
 				if($text == "ภาพ 1"){
                             
 				$messages = [
 				'type' => 'image',
-				'originalContentUrl' => "https://i.imgur.com//WOwfu0A",
-    				'previewImageUrl' => "https://i.imgur.com//WOwfu0A"
+				'originalContentUrl' => "https://i.imgur.com/kaWhCJl",
+    				'previewImageUrl' => "https://i.imgur.com/kaWhCJl"
 			];	
 			}
 			
