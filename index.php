@@ -33,6 +33,8 @@ if (!is_null($events['events'])) {
 				$messages = [
 				'type' => 'text',
 				'text' => $Light
+					<br />
+					echo "test"
   	
 			];
 			}	
