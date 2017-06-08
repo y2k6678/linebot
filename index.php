@@ -34,10 +34,10 @@ if (!is_null($events['events'])) {
 				'text' => "พิมพ์หมายเลข 1 เพื่อดูแสง                "."พิมพ์หมายเลข 2 ไม่บอกหรอก              "."พิมพ์หมายเลข 3 อิอิ"	
 			];
 			}	
-				if($text == "แสง"){		
+				if($text == "1"){		
 					$messages = [
 					'type' => 'text',
-					'text' => $Light
+					'text' => $Light."                 พิมพ์ help เพื่อดูเมนู"
 				];	
 			}
 			if($text == "HI"){
