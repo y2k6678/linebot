@@ -43,7 +43,7 @@ if (!is_null($events['events'])) {
 			
 			if($text == "2"){
 				$messages = [ 
-					'type' => 'text'
+					'type' => 'text',
 					'text' => "#วัดพระธาตุ                   "."อื่นๆ                            "
 						];
 					}
