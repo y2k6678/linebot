@@ -28,12 +28,12 @@ if (!is_null($events['events'])) {
 
 					// "text"
 			];
-			if($text == "แสง"){
-				
+			if($text == "แสง"){		
 				$messages = [
 				'type' => 'text',
 				'text' => $Light			
 			];
+				echo "Test" ;
 				
 			}	
 			if($text == "HI"){
