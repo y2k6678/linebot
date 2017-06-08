@@ -32,7 +32,7 @@ if (!is_null($events['events'])) {
 				$messages = [
 				'type' => 'text',
 				'text' => $Light
-					<?php echo "OK";>
+					<?php echo "OK"; ?>
 				
 			];
 				
