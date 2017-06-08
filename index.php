@@ -33,7 +33,7 @@ if (!is_null($events['events'])) {
 				'type' => 'text',
 				'text' => $Light			
 			];
-				echo "Test" ;
+				
 				
 			}	
 			if($text == "HI"){
