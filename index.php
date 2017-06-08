@@ -45,7 +45,8 @@ if (!is_null($events['events'])) {
 				$messages = [ 
 					'type' => 'text'
 					'text' => "#วัดพระธาตุ                   "."อื่นๆ                            "
-			}
+						];
+					}
 			if($text == "HI"){
                             
 				$messages = [
