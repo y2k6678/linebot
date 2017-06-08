@@ -28,7 +28,13 @@ if (!is_null($events['events'])) {
 
 					// "text"
 			];
-			
+			if($text == "help"){		
+				$messages = [
+				'type' => 'text',
+				'text' => "กดหมายเลข 1"
+					
+				
+			];
 				
 			if($text == "แสง"){		
 				$messages = [
