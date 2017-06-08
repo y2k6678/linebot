@@ -31,7 +31,8 @@ if (!is_null($events['events'])) {
 			if($text == "แสง"){		
 				$messages = [
 				'type' => 'text',
-				'text' => $Light			
+				'text' => $Light,
+				'text' => "Test1"
 			];
 				
 				
