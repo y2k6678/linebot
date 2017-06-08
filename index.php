@@ -28,6 +28,20 @@ if (!is_null($events['events'])) {
 
 					// "text"
 			];
+			
+			// Help 
+			if($text == "Help"){
+				$messages =[
+					'type' => 'text'
+					'text' => "กดหมายเลข 1 ดูเมนู"
+			}
+					
+			if($text == "1"){
+				$messages =[
+					'type' => 'text'
+					'text' => "กดหมายเลข 0 กลับไป"
+			}
+				
 			if($text == "แสง"){		
 				$messages = [
 				'type' => 'text',
@@ -37,7 +51,7 @@ if (!is_null($events['events'])) {
 			];
 				
 				
-			}	
+			}
 			if($text == "HI"){
                             
 				$messages = [
