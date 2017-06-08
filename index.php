@@ -31,20 +31,14 @@ if (!is_null($events['events'])) {
 			if($text == "help"){		
 				$messages = [
 				'type' => 'text',
-				'text' => "กดหมายเลข 1"
-					
-				
+				'text' => "กดหมายเลข 1"	
 			];
-				
-			if($text == "แสง"){		
-				$messages = [
-				'type' => 'text',
-				'text' => $Light
-					
-				
-			];
-				
-				
+			}	
+				if($text == "แสง"){		
+					$messages = [
+					'type' => 'text',
+					'text' => $Light
+				];	
 			}
 			if($text == "HI"){
                             
