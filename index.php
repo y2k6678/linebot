@@ -31,7 +31,7 @@ if (!is_null($events['events'])) {
 			if($text == "help"){		
 				$messages = [
 				'type' => 'text',
-				'text' => "พิมพ์หมายเลข 1 เพื่อดูแสง                "."พิมพ์หมายเลข 2 ดูสถานที่ทั้งหมด              "."พิมพ์หมายเลข 3 อิอิ"	
+				'text' => "พิมพ์หมายเลข 1 เพื่อดูแสง                "."พิมพ์หมายเลข 2 ดูสถานที่ทั้งหมด              ".
 			];
 			}	
 				if($text == "1"){		
@@ -67,10 +67,10 @@ if (!is_null($events['events'])) {
 			if($text == "ภาพ"){
                             
 				$messages = [
-				'type' => 'image','text'
+				'type' => 'image',
 				'originalContentUrl' => "https://i.imgur.com//WOwfu0A.jpg",
     				'previewImageUrl' => "https://i.imgur.com//WOwfu0A.jpg"
-				'text' => $Light	
+					
 
 			];	
 			}
