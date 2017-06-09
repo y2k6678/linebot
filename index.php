@@ -60,16 +60,17 @@ if (!is_null($events['events'])) {
 				$messages = [
 				'type' => 'image',
 				'originalContentUrl' => "https://sv6.postjung.com/picpost/data/184/184340-1-2995.jpg",
-    				'previewImageUrl' => "https://sv6.postjung.com/picpost/data/184/184340-1-2995.jpg".$Light
+    				'previewImageUrl' => "https://sv6.postjung.com/picpost/data/184/184340-1-2995.jpg"
 				
 			];	
 			}
 			if($text == "ภาพ"){
                             
 				$messages = [
-				'type' => 'image',
+				'type' => 'image','text'
 				'originalContentUrl' => "https://i.imgur.com//WOwfu0A.jpg",
     				'previewImageUrl' => "https://i.imgur.com//WOwfu0A.jpg"
+				'text' => $Light	
 
 			];	
 			}
