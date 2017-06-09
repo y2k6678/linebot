@@ -24,7 +24,7 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => $text 
+				'text' => "ไม่มีคำสั่งที่คุณพิมพ์ กรุณาพิมพ์ help เพื่อดูเมนู" 
 
 					// "text"
 			];
