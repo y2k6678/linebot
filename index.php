@@ -37,14 +37,14 @@ if (!is_null($events['events'])) {
 				if($text == "1"){		
 					$messages = [
 					'type' => 'text',
-					'text' => $Light.echo '<br>'."พิมพ์ help เพื่อดูเมนู"
+					'text' => $Light <br>."พิมพ์ help เพื่อดูเมนู"
 				];	
 			}
 			
 			if($text == "2"){
 				$messages = [ 
 					'type' => 'text',
-					'text' => "#วัดพระธาตุ                   "." #สถานที่อื่นๆ                           "." พิมพ์หมายเลข help เพื่อดูเมนู                          "
+					'text' => "#วัดพระธาตุ                   "." #สถานที่อื่นๆ                           "." พิมพ์หมายเลข help เพื่อดูเมนู "                          "
 						];
 					}
 			if($text == "HI"){
