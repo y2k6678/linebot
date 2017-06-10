@@ -37,8 +37,8 @@ if (!is_null($events['events'])) {
 				if($text == "1"){		
 					$messages = [
 					'type' => 'text',
-					'text' => $Light.
-						" <br>พิมพ์ help เพื่อดูเมนู"
+					'text' => $Light.<\n>
+						" พิมพ์ help เพื่อดูเมนู"
 				];	
 			}
 			
