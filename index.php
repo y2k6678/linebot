@@ -10,7 +10,8 @@ $events = json_decode($content, true);
 $Light = file_get_contents('https://api.thingspeak.com/channels/262354/fields/1/last.txt');
 
 //convert
-
+$text = $text;
+$text = strtoupper($text);
 
 if (!is_null($events['events'])) {
 	// Loop through each event
@@ -31,7 +32,7 @@ if (!is_null($events['events'])) {
 
 					// "text"
 			];
-			if (strtouppe($text == "HELP")){		
+			if ($text == "HELP"){		
 				$messages = [
 				'type' => 'text',
 				'text' => "พิมพ์หมายเลข 1 เพื่อดูแสง"."พิมพ์หมายเลข 2 ดูสถานที่ทั้งหมด"
