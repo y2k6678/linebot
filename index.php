@@ -8,6 +8,8 @@ $content = file_get_contents('php://input');
 $events = json_decode($content, true);
 // Validate parsed JSON data
 $Light = file_get_contents('https://api.thingspeak.com/channels/262354/fields/1/last.txt');
+$HUM = file_get_contents('https://api.thingspeak.com/channels/262354/fields/2/last.txt');
+$TEM = file_get_contents('https://api.thingspeak.com/channels/262354/fields/3/last.txt');
 
 //convert
 
@@ -41,7 +43,7 @@ if (!is_null($events['events'])) {
 				if($text == "1"){		
 					$messages = [
 					'type' => 'text',
-					'text' => $Light
+					'text' => "ความสว่างของแสง : ".$Light .""."C :".$TEM.""."ความชื้น :".$HUM ;
 				];	
 			}
 			
