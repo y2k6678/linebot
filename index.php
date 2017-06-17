@@ -13,7 +13,7 @@ $TEM = file_get_contents('https://api.thingspeak.com/channels/262354/fields/3/la
 
 //convert
 
-
+string strtoupper ( string $text )
 if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
