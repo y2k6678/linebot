@@ -11,6 +11,8 @@ $Light = file_get_contents('https://api.thingspeak.com/channels/262354/fields/1/
 $HUM = file_get_contents('https://api.thingspeak.com/channels/262354/fields/2/last.txt');
 $TEM = file_get_contents('https://api.thingspeak.com/channels/262354/fields/3/last.txt');
 //convert
+
+$srt = strtoupper($messages);
 if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
