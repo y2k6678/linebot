@@ -12,7 +12,7 @@ $HUM = file_get_contents('https://api.thingspeak.com/channels/262354/fields/2/la
 $TEM = file_get_contents('https://api.thingspeak.com/channels/262354/fields/3/last.txt');
 //convert
 
-$srt = strtoupper($text);
+$text = strtoupper($text);
 if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
