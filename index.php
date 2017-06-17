@@ -10,8 +10,7 @@ $events = json_decode($content, true);
 $Light = file_get_contents('https://api.thingspeak.com/channels/262354/fields/1/last.txt');
 
 //convert
-$text = $text;
-$text = strtoupper($text);
+
 
 if (!is_null($events['events'])) {
 	// Loop through each event
