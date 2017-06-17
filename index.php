@@ -43,7 +43,7 @@ if (!is_null($events['events'])) {
 				if($text == "1"){		
 					$messages = [
 					'type' => 'text',
-					'text' => "ความสว่างของแสง : ".$Light .""."C :".$TEM.""."ความชื้น :".$HUM 
+					'text' => "ความสว่างของแสง : ".$Light .""."อุณหภูมิ C :".$TEM.""."ความชื้น :".$HUM 
 				];	
 			}
 			
