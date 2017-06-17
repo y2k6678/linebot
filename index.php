@@ -13,7 +13,7 @@ $TEM = file_get_contents('https://api.thingspeak.com/channels/262354/fields/3/la
 
 //convert
 
-$text = strtoupper($text);
+
 if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
@@ -43,14 +43,14 @@ if (!is_null($events['events'])) {
 				if($text == "1"){		
 					$messages = [
 					'type' => 'text',
-					'text' => "ความสว่างของแสง : ".$Light ."\n"."อุณหภูมิ C :".$TEM."\n"."ความชื้น :".$HUM ."\n"."[พิมพ์หมายเลข help เพื่อดูเมนู]"
+					'text' => "ความสว่างของแสง : ".$Light ."\n"."อุณหภูมิ C :".$TEM."\n"."ความชื้น :".$HUM ."\n"."[พิมพ์ help เพื่อดูเมนู]"
 				];	
 			}
 			
 			if($text == "2"){
 				$messages = [ 
 					'type' => 'text',
-					'text' => "วัดพระธาตุ"."\n"."ม.วลัยลักษณ์"."\n"."[พิมพ์หมายเลข help เพื่อดูเมนู]"
+					'text' => "วัดพระธาตุ"."\n"."ม.วลัยลักษณ์"."\n"."[พิมพ์ help เพื่อดูเมนู]"
 						];
 					}
 			if($text == "HI"){
@@ -132,6 +132,8 @@ if (!is_null($events['events'])) {
 			echo $result . "\r\n";
 		}
 	}
+	$text = strtoupper($text);
 }
+
 echo "OK";
 
