@@ -74,8 +74,8 @@ if (!is_null($events['events'])) {
                             
 				$messages = [
 				'type' => 'image',
-				'originalContentUrl' => "https://i.imgur.com//WOwfu0A.jpg",
-    				'previewImageUrl' => "https://i.imgur.com//WOwfu0A.jpg"
+				'originalContentUrl' => "https://i.imgur.com//olAMJ.jpg",
+    				'previewImageUrl' => "https://i.imgur.com//olAMJ.jpg"
 					
 
 			];	
@@ -84,8 +84,8 @@ if (!is_null($events['events'])) {
                             
 				$messages = [
 				'type' => 'image',
-				'originalContentUrl' => "https://i.imgur.com/ezmaxsS.jpg",
-    				'previewImageUrl' => "https://i.imgur.com/ezmaxsS.jpg"
+				'originalContentUrl' => "https://i.imgur.com/olAMJ.jpg",
+    				'previewImageUrl' => "https://i.imgur.com/olAMJ.jpg"
 
 			];	
 			}
