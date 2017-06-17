@@ -80,7 +80,7 @@ if (!is_null($events['events'])) {
 
 			];	
 			}
-			if($text == "ภาพแซน"){
+			if($text == "ภาพ1"){
                             
 				$messages = [
 				'type' => 'image',
