@@ -74,8 +74,8 @@ if (!is_null($events['events'])) {
                             
 				$messages = [
 				'type' => 'image',
-				'originalContentUrl' => "https://i.imgur.com//olAMJ.jpg",
-    				'previewImageUrl' => "https://i.imgur.com//olAMJ.jpg"
+				'originalContentUrl' => "https://i.imgur.com//yuRTcoH.jpg",
+    				'previewImageUrl' => "https://i.imgur.com//yuRTcoH.jpg"
 					
 
 			];	
@@ -84,8 +84,8 @@ if (!is_null($events['events'])) {
                             
 				$messages = [
 				'type' => 'image',
-				'originalContentUrl' => "https://i.imgur.com/olAMJ.jpg",
-    				'previewImageUrl' => "https://i.imgur.com/olAMJ.jpg"
+				'originalContentUrl' => "https://i.imgur.com/yuRTcoH.jpg",
+    				'previewImageUrl' => "https://i.imgur.com/yuRTcoH.jpg"
 
 			];	
 			}
@@ -93,8 +93,8 @@ if (!is_null($events['events'])) {
                             
 				$messages = [
 				'type' => 'image',
-				'originalContentUrl' => "https://i.imgur.com/UlGEYjB.jpg",
-    				'previewImageUrl' => "https://i.imgur.com/UlGEYjB.jpg"
+				'originalContentUrl' => "https://i.imgur.com/yuRTcoH.jpg",
+    				'previewImageUrl' => "https://i.imgur.com/yuRTcoH.jpg"
 			];	
 			}
 			
