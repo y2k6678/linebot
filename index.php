@@ -39,7 +39,7 @@ if (!is_null($events['events'])) {
 				if($text == "1"){		
 					$messages = [
 					'type' => 'text',
-					'text' => $Light." ".$HUM." "."C :".$TEM
+					'text' => $Light.$HUM.$TEM
 				];	
 			}
 			
