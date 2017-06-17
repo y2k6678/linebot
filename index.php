@@ -33,7 +33,7 @@ if (!is_null($events['events'])) {
 
 					// "text"
 			];
-			if ($text == "HELP"){		
+			if ($text == strtoupper "HELP"){		
 				$messages = [
 				'type' => 'text',
 				'text' => "พิมพ์หมายเลข 1 เพื่อสถานะอากาศปัจจุบัน"."\n"."พิมพ์หมายเลข 2 ดูสถานที่ทั้งหมด"
@@ -132,7 +132,7 @@ if (!is_null($events['events'])) {
 			echo $result . "\r\n";
 		}
 	}
-	$text = strtoupper($text);
+	
 }
 
 echo "OK";
