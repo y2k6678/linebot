@@ -40,7 +40,7 @@ if (!is_null($events['events'])) {
 			];
 				
 			}	
-				if($text == "1"){		
+				if(define(" ".$text) == "1"){		
 					$messages = [
 					'type' => 'text',
 					'text' => "ความสว่างของแสง : ".$Light ."\n"."อุณหภูมิ C :".$TEM."\n"."ความชื้น :".$HUM ."\n"."[พิมพ์ help เพื่อดูเมนู]"
