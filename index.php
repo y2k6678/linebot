@@ -43,14 +43,14 @@ if (!is_null($events['events'])) {
 				if(trim($text) == "1"){		
 					$messages = [
 					'type' => 'text',
-					'text' => "ความสว่างของแสง : ".$Light ."\n"."อุณหภูมิ C :".$TEM."\n"."ความชื้น :".$HUM ."%".."\n"."[พิมพ์ help เพื่อดูเมนู]"
+					'text' => "ความสว่างของแสง : ".$Light ."\n"."อุณหภูมิ C :".$TEM."\n"."ความชื้น :".$HUM ."%"."\n"."[พิมพ์ help เพื่อดูเมนู]"
 				];	
 			}
 			
 			if($text == "KOKO"){
 				$messages = [ 
 					'type' => 'text'
-					'text' => "Test";
+					'text' => "Test"; ];
 				
 			}
 			
