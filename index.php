@@ -33,7 +33,7 @@ if (!is_null($events['events'])) {
 
 					// "text"
 			];
-			if (strtoupper($text) ==  "HELP"){		
+			if (strtoupper,trim($text) ==  "HELP"){		
 				$messages = [
 				'type' => 'text',
 				'text' => "พิมพ์หมายเลข 1 เพื่อสถานะอากาศปัจจุบัน"."\n"."พิมพ์หมายเลข 2 ดูสถานที่ทั้งหมด"
@@ -47,21 +47,15 @@ if (!is_null($events['events'])) {
 				];	
 			}
 			
-			if($text == "KOKO"){
-				$messages = [
-				'type' => 'text',
-				'text' => "พิมพ์หมายเลข 1 เพื่อสถานะอากาศปัจจุบัน"."\n"."พิมพ์หมายเลข 2 ดูสถานที่ทั้งหมด"
-			];
-				
-			}
 			
-			if($text == "2"){
+			
+			if(trim($text) == "2"){
 				$messages = [ 
 					'type' => 'text',
 					'text' => "วัดพระธาตุ"."\n"."ม.วลัยลักษณ์"."\n"."[พิมพ์ help เพื่อดูเมนู]"
 						];
 					}
-			if($text == "HI"){
+			if(strtoupper($text) == "HI"){
                             
 				$messages = [
 				'type' => 'text',
