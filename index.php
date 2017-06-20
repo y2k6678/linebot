@@ -13,7 +13,7 @@ $TEM = file_get_contents('https://api.thingspeak.com/channels/262354/fields/3/la
 
 //convert
 
-$text = trim($text," ");
+
 if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
@@ -33,7 +33,7 @@ if (!is_null($events['events'])) {
 
 					// "text"
 			];
-			if (strtoupper($text) ==  "HELP"){		
+			if (strtoupper($text) == "HELP"){		
 				$messages = [
 				'type' => 'text',
 				'text' => "พิมพ์หมายเลข 1 เพื่อสถานะอากาศปัจจุบัน"."\n"."พิมพ์หมายเลข 2 ดูสถานที่ทั้งหมด"
