@@ -48,9 +48,10 @@ if (!is_null($events['events'])) {
 			}
 			
 			if($text == "KOKO"){
-				$messages = [ 
-					'type' => 'text'
-					'text' => "Test"; ];
+				$messages = [
+				'type' => 'text',
+				'text' => "พิมพ์หมายเลข 1 เพื่อสถานะอากาศปัจจุบัน"."\n"."พิมพ์หมายเลข 2 ดูสถานที่ทั้งหมด"
+			];
 				
 			}
 			
