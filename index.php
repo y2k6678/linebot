@@ -43,10 +43,28 @@ if (!is_null($events['events'])) {
 				if(trim($text) == "1"){		
 					$messages = [
 					'type' => 'text',
-					'text' => "สถานที่ : "."ตึกอาคาร B8"."\n"."ความสว่างของแสง : ".$Light ."\n"."อุณหภูมิ C :".$TEM."\n"."ความชื้น :".$HUM ."%"."\n"."พิมพ์ [help] เพื่อดูเมนู"
+					'text' => "สถานที่ : "."ตึกอาคาร B8"."\n"."ความสว่างของแสง : ".$Light ."\n"."อุณหภูมิ C :".$TEM."\n"."ความชื้น :".$HUM ." %"."\n"."พิมพ์ [help] เพื่อดูเมนู"
+				];	
+			}
+			if(trim($text) == "แสง"){		
+					$messages = [
+					'type' => 'text',
+					'text' => "ค่าแสง : ".$Light
+				];	
+			}
+			if(trim($text) == "อุณหภูมิ"){		
+					$messages = [
+					'type' => 'text',
+					'text' => "อุณหภูมิ C :".$TEM
 				];	
 			}
 			
+			if(trim($text) == "ความชื้น"){		
+					$messages = [
+					'type' => 'text',
+					'text' => "ความชื้น: ".$HUM." %"
+				];	
+			}
 			
 			
 			if(trim($text) == "2"){
