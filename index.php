@@ -51,7 +51,7 @@ if (!is_null($events['events'])) {
 				if($Light>900){		
 					$messages = [
 					'type' => 'text',
-					'text' => "ค่าแสง : "." กลางคืน"
+					'text' => "ค่าแสง : "."มีแสงน้อย \t"." กลางคืน"
 					];
 					     } 
 						}
@@ -60,7 +60,7 @@ if (!is_null($events['events'])) {
 				if($Light<700){		
 					$messages = [
 					'type' => 'text',
-					'text' => "ค่าแสง : "." เช้า"
+					'text' => "ค่าแสง : "."มีแสงพอประมาณ"." ตอนเย็น"
 					];
 					     } 
 						}
