@@ -53,10 +53,16 @@ if (!is_null($events['events'])) {
 					'type' => 'text',
 					'text' => "ค่าแสง : "." กลางคืน"
 					];
-					     } $messages = [
+					     } 
+						}
+			
+			if(trim($text) == "แสง"){
+				if($Light<700){		
+					$messages = [
 					'type' => 'text',
 					'text' => "ค่าแสง : "." เช้า"
 					];
+					     } 
 						}
 			if(trim($text) == "อุณหภูมิ"){		
 					$messages = [
