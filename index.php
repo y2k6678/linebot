@@ -12,8 +12,8 @@ $HUM = file_get_contents('https://api.thingspeak.com/channels/262354/fields/2/la
 $TEM = file_get_contents('https://api.thingspeak.com/channels/262354/fields/3/last.txt');
 
 //convert
-
-
+if($Light >800){ echo $Light." กลางคืน"}
+ 
 if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
@@ -36,7 +36,8 @@ if (!is_null($events['events'])) {
 			if (strtoupper($text) == "HELP"){		
 				$messages = [
 				'type' => 'text',
-				'text' => "พิมพ์หมายเลข [1]เพื่อดูสถานะอากาศปัจจุบัน"."\n"."พิมพ์หมายเลข [2] ดูสถานที่ทั้งหมด"."\n"."พิมพ์หมายเลข [3] รายละเอียดสภาพอากาศ"
+				'text' => "พิมพ์หมายเลข [1]เพื่อดูสถานะอากาศปัจจุบัน"."\n"."พิมพ์หมายเลข [2] ดูสถานที่ทั้งหมด"."\n"."พิมพ์หมายเลข [3] รายละเอียดสภาพอากาศ"."\n"."พิมพ์ [แสง] แสดงค่าแสง"."\n".
+					"พิมพ์ [อุณหภูมิ] แสดงค่าอุณหภูมิ"."\n"."พิมพ์ [ความชื้น] แสดงค่าความชื้น"
 			];
 				
 			}	
