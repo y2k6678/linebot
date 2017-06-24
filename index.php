@@ -47,14 +47,13 @@ if (!is_null($events['events'])) {
 					'text' => "สถานที่ : "."ตึกอาคาร B8"."\n"."ความสว่างของแสง : ".$Light ."\n"."อุณหภูมิ C :".$TEM."\n"."ความชื้น :".$HUM ." %"."\n"."พิมพ์ [help] เพื่อดูเมนู"
 				];	
 			}
-			if(trim($text) == "แสง"){if($Light>900){		
+			if(trim($text) == "แสง"){
+				if($Light>900){		
 					$messages = [
 					'type' => 'text',
 					'text' => "ค่าแสง : "." กลางคืน"
 					];
-						} else {
-							$messages = [
-							'type' => 'text',
+						} else{
 							'text' => "ค่าแสง : "." เช้า"
 						 	}
 						}
