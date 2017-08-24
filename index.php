@@ -12,10 +12,10 @@ $HUM = file_get_contents('https://api.thingspeak.com/channels/262354/fields/2/la
 $TEM = file_get_contents('https://api.thingspeak.com/channels/262354/fields/3/last.txt');
 
 //convert
-$fname=array("Peter","Ben","Joe");
-$age=array("35","37","43");
-
+$fname=array("Peter");
+$age=array("35");
 $c=array_combine($fname,$age);
+print_r($c);
 
  
 if (!is_null($events['events'])) {
