@@ -15,7 +15,7 @@ $TEM = file_get_contents('https://api.thingspeak.com/channels/262354/fields/3/la
 $fname=array("Peter");
 $age=array("35");
 $c=array_combine($fname,$age);
-print_r($c);
+
 
  
 if (!is_null($events['events'])) {
