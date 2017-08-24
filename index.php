@@ -12,10 +12,11 @@ $HUM = file_get_contents('https://api.thingspeak.com/channels/262354/fields/2/la
 $TEM = file_get_contents('https://api.thingspeak.com/channels/262354/fields/3/last.txt');
 
 //convert
-$beginning = 'foo';
-$end = array(1 => 'bar');
-$result = array_merge(("1212")$beginning, ($TEM)$end);
-print_r($result);
+$fname=array("Peter","Ben","Joe");
+$age=array("35","37","43");
+
+$c=array_combine($fname,$age);
+
  
 if (!is_null($events['events'])) {
 	// Loop through each event
@@ -32,7 +33,7 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => "ไม่มีคำสั่งที่คุณพิมพ์ "."\n"."กรุณาพิมพ์ [help] เพื่อดูเมนู"."\n"."[help] Show Status".$result
+				'text' => "ไม่มีคำสั่งที่คุณพิมพ์ "."\n"."กรุณาพิมพ์ [help] เพื่อดูเมนู"."\n"."[help] Show Status".$c
 
 					// "text"
 			];
