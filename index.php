@@ -12,19 +12,6 @@ $HUM = file_get_contents('https://api.thingspeak.com/channels/262354/fields/2/la
 $TEM = file_get_contents('https://api.thingspeak.com/channels/262354/fields/3/last.txt');
 
 //convert
-$dest = imagecreatefromjpeg('https://i.imgur.com//yuRTcoH.jpg');
-$src = imagecreatefromjpeg('https://sv6.postjung.com/picpost/data/184/184340-1-2995.jpg');
-
-imagealphablending($dest, false);
-imagesavealpha($dest, true);
-
-imagecopymerge($dest, $src, 10, 9, 0, 0, 181, 180, 100); //have to play with these numbers for it to work for you, etc.
-
-header('Content-Type: image/png');
-imagejpeg($dest);
-
-imagedestroy($dest);
-imagedestroy($src);
 
 
  
@@ -43,7 +30,7 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => "ไม่มีคำสั่งที่คุณพิมพ์ "."\n"."กรุณาพิมพ์ [help] เพื่อดูเมนู"."\n"."[help] Show Status".$dest.$src
+				'text' => "ไม่มีคำสั่งที่คุณพิมพ์ "."\n"."กรุณาพิมพ์ [help] เพื่อดูเมนู"."\n"."[help] Show Status"
 
 					// "text"
 			];
