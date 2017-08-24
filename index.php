@@ -10,9 +10,11 @@ $events = json_decode($content, true);
 $Light = file_get_contents('https://api.thingspeak.com/channels/262354/fields/1/last.txt');
 $HUM = file_get_contents('https://api.thingspeak.com/channels/262354/fields/2/last.txt');
 $TEM = file_get_contents('https://api.thingspeak.com/channels/262354/fields/3/last.txt');
-
+$tst =  file_get_contents('https://i.imgur.com/yuRTcoH.jpg');
 //convert
-
+foreach($TEM as $tst => $val){
+	$foo->$tst = $val;
+}
  
 if (!is_null($events['events'])) {
 	// Loop through each event
@@ -54,6 +56,15 @@ if (!is_null($events['events'])) {
 					'text' => "ค่าแสง : "."มีแสงน้อย \t"." กลางคืน"
 					];
 					     } 
+				if (strtoupper($text) == "kok"){		
+				$messages = [
+				'type' => 'text',
+				'text' => ""sdw : ".$val
+			];
+				
+			}
+				
+				
 						}
 			
 			if(trim($text) == "แสง"){
