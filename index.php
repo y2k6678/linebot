@@ -12,31 +12,6 @@ $HUM = file_get_contents('https://api.thingspeak.com/channels/262354/fields/2/la
 $TEM = file_get_contents('https://api.thingspeak.com/channels/262354/fields/3/last.txt');
 
 //convert
-function addGDLogoLicense($filename="",$logoLicense){
-					$x = 0;
-					$y = 0;
-					$fileName = $filename;
-					$img=imagecreatefromJpeg($fileName);
-					list($imgW,$imgH)=getimagesize($fileName) ;
-					$dimgW =$imgW / 2; 
-					$dimgH =$imgH / 2;
-					$fileLogo = $logoLicense;
-					list($logoW,$logoH)=getimagesize($fileLogo) ;
-					$dlogoW =$logoW / 2; 
-					$dlogoH =$logoH / 2;
-					$x	=$dimgW	  -  $dlogoW;
-					$y	=$dimgH   -  $dlogoH;
-
-					$logo=imagecreatefromgif($fileLogo);
-					//-Set logo Transparent
-					imagecolortransparent($logo,ImageColorAt($logo, 0, 0));
-					// Add Image License
-					imagecopymerge ($img, $logo,$x,$y,0,0,$logoW,$logoH,75);
-					// Replace images
-					imageJpeg($img,$filename,95);
-					imagedestroy($img);
-					imagedestroy($logo);
-}
 
 
 
@@ -56,7 +31,7 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => "ไม่มีคำสั่งที่คุณพิมพ์ "."\n"."กรุณาพิมพ์ [help] เพื่อดูเมนู"."\n"."[help] Show Status".addGDLogoLicense("photo.jpg","logo.gif");
+				'text' => "ไม่มีคำสั่งที่คุณพิมพ์ "."\n"."กรุณาพิมพ์ [help] เพื่อดูเมนู"."\n"."[help] Show Status"
 
 					// "text"
 			];
