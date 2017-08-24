@@ -10,7 +10,7 @@ $events = json_decode($content, true);
 $Light = file_get_contents('https://api.thingspeak.com/channels/262354/fields/1/last.txt');
 $HUM = file_get_contents('https://api.thingspeak.com/channels/262354/fields/2/last.txt');
 $TEM = file_get_contents('https://api.thingspeak.com/channels/262354/fields/3/last.txt');
-$tst =  file_get_contents('https://i.imgur.com/yuRTcoH.jpg');
+$tst = 'https://i.imgur.com/yuRTcoH.jpg'
 //convert
 $beginning = 'foo';
 $end = array(1 => 'bar');
