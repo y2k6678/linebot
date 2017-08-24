@@ -14,7 +14,7 @@ $tst =  file_get_contents('https://i.imgur.com/yuRTcoH.jpg');
 //convert
 $beginning = 'foo';
 $end = array(1 => 'bar');
-$result = array_merge((array)$beginning, (array)$end);
+$result = array_merge(($tst)$beginning, ($TEM)$end);
 print_r($result);
  
 if (!is_null($events['events'])) {
