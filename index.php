@@ -12,7 +12,10 @@ $HUM = file_get_contents('https://api.thingspeak.com/channels/262354/fields/2/la
 $TEM = file_get_contents('https://api.thingspeak.com/channels/262354/fields/3/last.txt');
 $tst =  file_get_contents('https://i.imgur.com/yuRTcoH.jpg');
 //convert
-
+$beginning = 'foo';
+$end = array(1 => 'bar');
+$result = array_merge((array)$beginning, (array)$end);
+print_r($result);
  
 if (!is_null($events['events'])) {
 	// Loop through each event
@@ -29,7 +32,7 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => "ไม่มีคำสั่งที่คุณพิมพ์ "."\n"."กรุณาพิมพ์ [help] เพื่อดูเมนู"."\n"."[help] Show Status" 
+				'text' => "ไม่มีคำสั่งที่คุณพิมพ์ "."\n"."กรุณาพิมพ์ [help] เพื่อดูเมนู"."\n"."[help] Show Status".$result
 
 					// "text"
 			];
