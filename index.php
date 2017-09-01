@@ -10,7 +10,7 @@ $events = json_decode($content, true);
 $Light = file_get_contents('https://api.thingspeak.com/channels/262354/fields/1/last.txt');
 $HUM = file_get_contents('https://api.thingspeak.com/channels/262354/fields/2/last.txt');
 $TEM = file_get_contents('https://api.thingspeak.com/channels/262354/fields/3/last.txt');
-
+$aba = https://i.imgur.com//yuRTcoH.jpg;
 //convert
 
 
@@ -145,8 +145,8 @@ if (!is_null($events['events'])) {
                             
 				$messages = [
 				'type' => 'image',
-				'originalContentUrl' => "https://i.imgur.com/yuRTcoH.jpg",
-    				'previewImageUrl' => "https://i.imgur.com/yuRTcoH.jpg"
+				'originalContentUrl' => $aba,
+    				'previewImageUrl' => $aba
 			];	
 			}
 			
