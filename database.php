@@ -16,7 +16,7 @@ $dbconn = pg_connect("host=".$GLOBALS['host']." port=5432 dbname=".$GLOBALS['db'
  pg_exec($dbconn,$sql);
 
     pg_close($dbconn);
-echo $sql;
+echo "<br>".$GLOBALS['host'];
 
 
 ?>
