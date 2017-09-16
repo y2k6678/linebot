@@ -13,8 +13,8 @@ $dbconn = pg_connect("host=".$GLOBALS['host']." port=5432 dbname=".$GLOBALS['db'
     or die('Could not connect: ' . pg_last_error());
     $sql = "INSERT INTO weatherstation (ID, LINK, DATETIME)
    VALUES ('".$_GET['getid']."', '".$_GET['getLINK']."', '".$_GET['getDATETIME']."')";
- pg_exec($dbconn,$sql);
- $result = pg_query($dbconn, $query);
+ 
+ $result = pg_query($dbconn, $sql);
  if (pg_num_rows($result)) 
  {
      echo "User successfully added!<br/>";
