@@ -12,7 +12,7 @@ $db   = "dcv361109jo6fh";
 $dbconn = pg_connect("host=".$GLOBALS['host']." port=5432 dbname=".$GLOBALS['db']." user=".$GLOBALS['user']." password=".$GLOBALS['pass'])
     or die('Could not connect: ' . pg_last_error());
     $sql = "INSERT INTO weatherstation (\"ID\", \"LINK\", \"DATETIME\")
-   VALUES (\"".$_GET['getid']."\", \"".$_GET['getLINK']."\", \"".$_GET['getDATETIME']."\")";
+   VALUES ('".$_GET['getid']."', '".$_GET['getLINK']."', '".$_GET['getDATETIME']."')";
  
  $query = pg_query($sql);
  if($query)
