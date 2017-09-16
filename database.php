@@ -11,10 +11,9 @@ $db   = "dcv361109jo6fh";
 
 $dbconn = pg_connect("host=".$GLOBALS['host']." port=5432 dbname=".$GLOBALS['db']." user=".$GLOBALS['user']." password=".$GLOBALS['pass'])
     or die('Could not connect: ' . pg_last_error());
-    pg_connect();
     $sql = "INSERT INTO weatherstation (ID, LINK, DATETIME)
    VALUES ('".$_GET['getid']."', '".$_GET['getLINK']."', '".$_GET['getDATETIME']."')";
-    $result = pg_exec($dbconn,$sql);
+ pg_exec($dbconn,$sql);
 
     pg_close($dbconn);
 
