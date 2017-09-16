@@ -7,6 +7,6 @@ $db   = "dcv361109jo6fh";
 $dbconn = pg_connect("host=".$GLOBALS['host']." port=5432 dbname=".$GLOBALS['db']." user=".$GLOBALS['user']." password=".$GLOBALS['pass'])
     or die('Could not connect: ' . pg_last_error());
    
-
+echo $dbconn;
 
 ?>
