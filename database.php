@@ -8,5 +8,5 @@ $dbconn = pg_connect("host=".$GLOBALS['host']." port=5432 dbname=".$GLOBALS['db'
     or die('Could not connect: ' . pg_last_error());
    
 echo $dbconn;
-
+echo "hello wo";
 ?>
