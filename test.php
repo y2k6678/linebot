@@ -1,15 +1,10 @@
 <?php 
 echo "Today is " . date("Y-m-d") . "<br>";
 
-
- function showtime($time)
-{
-    echo date("Y-m-d")." ". $time;
-}
-
-for ($i=0; $i < 12; $i++) { 
+for ($i=1; $i <13 ; $i++) { 
     # code...
-    showtime($i)
+    $date=date("Y-m-d");
+    echo "$date  $i"
 }
 
 
