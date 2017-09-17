@@ -17,7 +17,7 @@ function showtime($time){
     echo $h[0] . "   ".$h[1];
 }
 
-showtime($GET["time"]);
+showtime($_GET["time"]);
 // for($i=1;$i<13;$i++)
 // {
 //     echo "$date $i";
