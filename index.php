@@ -2,6 +2,16 @@
 <?php
 $access_token = 'QoYlV2SNWU962nXM/7iAkLLD73bvlzZFpxvqi29SgqPeeKDt0xFNVEoobjqxNkh8cqRPM5FjqxmeQX+cZxv4Vwg6+SM2iVjNqR7CLWrhVM5w12OR8mTQdyiCSNj0dE53mvOE/3GHgW8keruuXF82AgdB04t89/1O/w1cDnyilFU=';
 
+$host = "ec2-107-22-211-182.compute-1.amazonaws.com";
+$user = "mmdkvvqziulstc";
+$pass = "e10240d71df70c411f5201bc37491e9091491ff276b8d8b66f8e507ea5b7dc22";
+$db   = "dcv361109jo6fh";
+
+//database
+$dbconn = pg_connect("host=".$GLOBALS['host']." port=5432 dbname=".$GLOBALS['db']." user=".$GLOBALS['user']." password=".$GLOBALS['pass'])
+	or die('Could not connect: ' . pg_last_error());
+	
+
 // Get POST body content
 $content = file_get_contents('php://input');
 // Parse JSON
@@ -14,7 +24,7 @@ $TEM = file_get_contents('https://api.thingspeak.com/channels/262354/fields/3/la
 $aba = ('https://i.imgur.com//yuRTcoH.jpg');
 //convert
 
-
+$sqlgetlastrecord= "select * from weatherstation order by \"ID\" desc limit 1";
  
 if (!is_null($events['events'])) {
 	// Loop through each event
@@ -117,11 +127,16 @@ if (!is_null($events['events'])) {
 			];	
 			}
 			if($text == "ภาพ"){
-                            
+				$rs = pg_query($dbconn, $sqlgetlastrecord) or die("Cannot execute query: $query\n");
+				$templink="";
+				while ($row = pg_fetch_row($rs)) {
+				  $templink=$row[1];
+				}
+				
 				$messages = [
 				'type' => 'image',
-				'originalContentUrl' => "https://i.imgur.com//yuRTcoH.jpg",
-    				'previewImageUrl' => "https://i.imgur.com//yuRTcoH.jpg"
+				'originalContentUrl' => $templink,
+    				'previewImageUrl' => $templink
 					
 
 			];	
