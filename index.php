@@ -24,7 +24,7 @@ $TEM = file_get_contents('https://api.thingspeak.com/channels/262354/fields/3/la
 $aba = ('https://i.imgur.com//yuRTcoH.jpg');
 //convert
 
-$sqlgetlastrecord= "select * from weatherstation order by \"ID\" desc limit 1";
+$sqlgetlastrecord= "select * from weatherstation order by \"DATETIME\" desc limit 1";
  
 if (!is_null($events['events'])) {
 	// Loop through each event
