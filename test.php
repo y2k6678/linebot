@@ -2,7 +2,7 @@
 echo "Today is " . date("Y-m-d") . "<br>";
 
 
-public function showtime($time)
+ function showtime($time)
 {
     echo $time;
 }
