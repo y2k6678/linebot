@@ -174,11 +174,15 @@ if (!is_null($events['events'])) {
 				
 			}
 				if($text == "ภาพ 1"){
-                            
-				$messages = [
-				'type' => 'image',
-				'originalContentUrl' => $aba,
-    				'previewImageUrl' => $aba
+					$rs = pg_query($dbconn, $sqlgetlastrecord) or die("Cannot execute query: $query\n");
+					$templink="";
+					while ($row = pg_fetch_row($rs)) {
+					  $templink=$row[2];
+					}
+					$messages = [
+						'type' => 'text',
+						'text' => "HI ".$templink	 
+				
 			];	
 			}
 			
