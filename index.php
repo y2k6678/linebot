@@ -1,11 +1,30 @@
 
 <?php
+
 $access_token = 'QoYlV2SNWU962nXM/7iAkLLD73bvlzZFpxvqi29SgqPeeKDt0xFNVEoobjqxNkh8cqRPM5FjqxmeQX+cZxv4Vwg6+SM2iVjNqR7CLWrhVM5w12OR8mTQdyiCSNj0dE53mvOE/3GHgW8keruuXF82AgdB04t89/1O/w1cDnyilFU=';
 
 $host = "ec2-107-22-211-182.compute-1.amazonaws.com";
 $user = "mmdkvvqziulstc";
 $pass = "e10240d71df70c411f5201bc37491e9091491ff276b8d8b66f8e507ea5b7dc22";
 $db   = "dcv361109jo6fh";
+
+$date=date("Y-m-d");
+function showtime($time){
+    $h =split(":",$time);
+    if($h[1]>=0&&$h[1]<15)
+        $h[1]=0;
+    else if($h[1]>=15&&$h[1]<30)
+    $h[1]=15;
+    else if($h[1]>=30&&$h[1]<45)
+    $h[1]=30;
+    else if($h[1]>=45&&$h[1]<60)
+    $h[1]=45;
+    else if($h[1]>=60)
+    $h[1]=0
+    ;
+    return $h[0] . ":".$h[1];
+}
+
 
 //database
 $dbconn = pg_connect("host=".$GLOBALS['host']." port=5432 dbname=".$GLOBALS['db']." user=".$GLOBALS['user']." password=".$GLOBALS['pass'])
@@ -141,11 +160,12 @@ if (!is_null($events['events'])) {
 
 			];	
 			}
+			
 			$jntemptext=split(" ",$text);
 			if($jntemptext[0] == "ภาพ"){
                             $messages = [
 				'type' => 'text',
-				'text' => "HI $jntemptext[1] "
+				'text' => "HI $jntemptext[1] ".(showtime($jntemptext[1])
 				// $messages = [
 				// 'type' => 'image',
 				// 'originalContentUrl' => "https://i.imgur.com/yuRTcoH.jpg",
