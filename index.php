@@ -20,8 +20,7 @@ function showtime($time){
     else if($h[1]>=45&&$h[1]<60)
     $h[1]=45;
     else if($h[1]>=60)
-    $h[1]=0
-    ;
+    $h[1]=0;
     return $h[0] . ":".$h[1];
 }
 
@@ -165,7 +164,7 @@ if (!is_null($events['events'])) {
 			if($jntemptext[0] == "ภาพ"){
                             $messages = [
 				'type' => 'text',
-				'text' => "HI $jntemptext[1] ".(showtime($jntemptext[1])
+				'text' => "HI ".(showtime($jntemptext[1])
 				// $messages = [
 				// 'type' => 'image',
 				// 'originalContentUrl' => "https://i.imgur.com/yuRTcoH.jpg",
