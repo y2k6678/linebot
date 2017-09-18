@@ -13,7 +13,8 @@ function showtime($time){
     else if($h[1]>=45&&$h[1]<60)
     $h[1]=45;
     else if($h[1]>=60)
-    $h[1]=60;
+    $h[1]=0
+    ;
     echo $h[0] . "   ".$h[1];
 }
 
