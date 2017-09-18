@@ -178,7 +178,7 @@ if (!is_null($events['events'])) {
 
 			];
 				
-			}
+		}
 				if($text == "ภาพ 1"){
 					$rs = pg_query($dbconn, $sqlgetlastrecord) or die("Cannot execute query: $query\n");
 					$templink="";
