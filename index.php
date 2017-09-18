@@ -14,27 +14,27 @@ function showtime($time){
     if($h[1]>=0&&$h[1]<15)
 		{
 			$h[1]=0;
-		$selectbydate="select * from weatherstation WHERE \"DATETIME\" BETWEEN '2017-09-17 $h[0]:0:00' and '2017-09-17 $h[0]:15:00'";
+		$selectbydate="select * from weatherstation where \"DATETIME\" BETWEEN '2017-09-17 $h[0]:0:00' and '2017-09-17 $h[0]:15:00'";
 	}
     else if($h[1]>=15&&$h[1]<30)
 		{
 			$h[1]=15;
-		$selectbydate="select * from weatherstation WHERE \"DATETIME\" BETWEEN '2017-09-17 $h[0]:15:01' and '2017-09-17 $h[0]:30:00'";
+		$selectbydate="select * from weatherstation where \"DATETIME\" BETWEEN '2017-09-17 $h[0]:15:01' and '2017-09-17 $h[0]:30:00'";
 	}
     else if($h[1]>=30&&$h[1]<45)
 		{
 			$h[1]=30;
-		$selectbydate="select * from weatherstation WHERE \"DATETIME\" BETWEEN '2017-09-17 $h[0]:30:01' and '2017-09-17 $h[0]:45:00'";
+		$selectbydate="select * from weatherstation where \"DATETIME\" BETWEEN '2017-09-17 $h[0]:30:01' and '2017-09-17 $h[0]:45:00'";
 	}
     else if($h[1]>=45&&$h[1]<60)
 		 {
 			$h[1]=45;
-		   $selectbydate="select * from weatherstation WHERE \"DATETIME\" BETWEEN '2017-09-17 $h[0]:45:01' and '2017-09-17 $h[0]:60:00'";
+		   $selectbydate="select * from weatherstation where \"DATETIME\" BETWEEN '2017-09-17 $h[0]:45:01' and '2017-09-17 $h[0]:60:00'";
 		}
     else if($h[1]>=60)
 		{
 			$h[1]=0;
-		$selectbydate="select * from weatherstation WHERE \"DATETIME\" BETWEEN '2017-09-17 $h[0]:0:00' and '2017-09-17 $h[0]:15:00'";
+		$selectbydate="select * from weatherstation where \"DATETIME\" BETWEEN '2017-09-17 $h[0]:0:00' and '2017-09-17 $h[0]:15:00'";
 	}
   			return array( $h[0] . ":".$h[1],$selectbydate);
 }
