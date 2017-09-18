@@ -141,10 +141,11 @@ if (!is_null($events['events'])) {
 
 			];	
 			}
-			if((split(" ",$text))[0] == "ภาพ"){
+			$jntemptext=split(" ",$text)
+			if($jntemptext[0] == "ภาพ"){
                             $messages = [
 				'type' => 'text',
-				'text' => "HI".(split(" ",$text))[1] 
+				'text' => "HI".$jntemptext[1] 
 				// $messages = [
 				// 'type' => 'image',
 				// 'originalContentUrl' => "https://i.imgur.com/yuRTcoH.jpg",
