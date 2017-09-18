@@ -176,8 +176,9 @@ if (!is_null($events['events'])) {
 			}
 			
 			$jntemptext=split(" ",$text);
-			$jndata=showtime($jntemptext[1])
+			
 			if($jntemptext[0] == "ภาพ"){
+				$jndata=showtime($jntemptext[1]);	
 				$messages = [
 				'type' => 'text',
 				'text' => "HI $jndata[0] \n$jndata[1]"
@@ -187,7 +188,7 @@ if (!is_null($events['events'])) {
     			// 	'previewImageUrl' => "https://i.imgur.com/yuRTcoH.jpg"
 
 			];
-				
+		
 		}
 				if($text == "ภาพ 1"){
 					$rs = pg_query($dbconn, $sqlgetlastrecord) or die("Cannot execute query: $query\n");
