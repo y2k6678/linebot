@@ -176,9 +176,9 @@ if (!is_null($events['events'])) {
 			}
 			
 			$jntemptext=split(" ",$text);
+			$jndata=showtime($jntemptext[1])
 			if($jntemptext[0] == "ภาพ"){
-				$jndata=showtime($jntemptext[1])
-                $messages = [
+				$messages = [
 				'type' => 'text',
 				'text' => "HI $jndata[0] \n$jndata[1]"
 				// $messages = [
