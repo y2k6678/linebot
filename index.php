@@ -9,19 +9,25 @@ $pass = "e10240d71df70c411f5201bc37491e9091491ff276b8d8b66f8e507ea5b7dc22";
 $db   = "dcv361109jo6fh";
 
 $date=date("Y-m-d");
-function showtime($time){
+function showtime($time,$timequery){
     $h =split(":",$time);
     if($h[1]>=0&&$h[1]<15)
-    	$h[1]=0;
+		{$h[1]=0;
+		$selectbydate="SELECT * FROM weatherstation WHERE \"DATETIME\" BETWEEN '2017-09-17 $h[0]:0:00' and '2017-09-17 $h[0]:15:00'"}
     else if($h[1]>=15&&$h[1]<30)
-    	$h[1]=15;
+		{$h[1]=15;
+		$selectbydate="SELECT * FROM weatherstation WHERE \"DATETIME\" BETWEEN '2017-09-17 $h[0]:15:01' and '2017-09-17 $h[0]:30:00'"}
     else if($h[1]>=30&&$h[1]<45)
-    	$h[1]=30;
+		{$h[1]=30;
+		$selectbydate="SELECT * FROM weatherstation WHERE \"DATETIME\" BETWEEN '2017-09-17 $h[0]:30:01' and '2017-09-17 $h[0]:45:00'"}
     else if($h[1]>=45&&$h[1]<60)
-   		$h[1]=45;
+		   {$h[1]=45;
+		   $selectbydate="SELECT * FROM weatherstation WHERE \"DATETIME\" BETWEEN '2017-09-17 $h[0]:45:01' and '2017-09-17 $h[0]:60:00'"}
     else if($h[1]>=60)
-    	$h[1]=0;
-    return $h[0] . ":".$h[1];
+		{$h[1]=0;
+			$selectbydate="SELECT * FROM weatherstation WHERE \"DATETIME\" BETWEEN '2017-09-17 $h[0]:0:00' and '2017-09-17 $h[0]:15:00'"}
+   $timequery = $selectbydate;
+			return $h[0] . ":".$h[1];
 }
 
 
@@ -159,12 +165,12 @@ if (!is_null($events['events'])) {
 
 			];	
 			}
-			
+			$jntempquery="";
 			$jntemptext=split(" ",$text);
 			if($jntemptext[0] == "ภาพ"){
                             $messages = [
 				'type' => 'text',
-				'text' => "HI ".(showtime($jntemptext[1]))
+				'text' => "HI ".(showtime($jntemptext[1],$jntempquery))." $jntempquery"
 				// $messages = [
 				// 'type' => 'image',
 				// 'originalContentUrl' => "https://i.imgur.com/yuRTcoH.jpg",
@@ -181,7 +187,7 @@ if (!is_null($events['events'])) {
 					}
 					$messages = [
 						'type' => 'text',
-						'text' => "HI ".$templink	 
+						'text' => "HI ".datetime($templink)	 
 				
 			];	
 			}
