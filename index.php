@@ -12,20 +12,30 @@ $date=date("Y-m-d");
 function showtime($time){
     $h =split(":",$time);
     if($h[1]>=0&&$h[1]<15)
-		{$h[1]=0;
-		$selectbydate="SELECT * FROM weatherstation WHERE \"DATETIME\" BETWEEN '2017-09-17 $h[0]:0:00' and '2017-09-17 $h[0]:15:00'"}
+		{
+			$h[1]=0;
+		$selectbydate="select * from weatherstation WHERE \"DATETIME\" BETWEEN '2017-09-17 $h[0]:0:00' and '2017-09-17 $h[0]:15:00'";
+	}
     else if($h[1]>=15&&$h[1]<30)
-		{$h[1]=15;
-		$selectbydate="SELECT * FROM weatherstation WHERE \"DATETIME\" BETWEEN '2017-09-17 $h[0]:15:01' and '2017-09-17 $h[0]:30:00'"}
+		{
+			$h[1]=15;
+		$selectbydate="select * from weatherstation WHERE \"DATETIME\" BETWEEN '2017-09-17 $h[0]:15:01' and '2017-09-17 $h[0]:30:00'";
+	}
     else if($h[1]>=30&&$h[1]<45)
-		{$h[1]=30;
-		$selectbydate="SELECT * FROM weatherstation WHERE \"DATETIME\" BETWEEN '2017-09-17 $h[0]:30:01' and '2017-09-17 $h[0]:45:00'"}
+		{
+			$h[1]=30;
+		$selectbydate="select * from weatherstation WHERE \"DATETIME\" BETWEEN '2017-09-17 $h[0]:30:01' and '2017-09-17 $h[0]:45:00'";
+	}
     else if($h[1]>=45&&$h[1]<60)
-		   {$h[1]=45;
-		   $selectbydate="SELECT * FROM weatherstation WHERE \"DATETIME\" BETWEEN '2017-09-17 $h[0]:45:01' and '2017-09-17 $h[0]:60:00'"}
+		 {
+			$h[1]=45;
+		   $selectbydate="select * from weatherstation WHERE \"DATETIME\" BETWEEN '2017-09-17 $h[0]:45:01' and '2017-09-17 $h[0]:60:00'";
+		}
     else if($h[1]>=60)
-		{$h[1]=0;
-			$selectbydate="SELECT * FROM weatherstation WHERE \"DATETIME\" BETWEEN '2017-09-17 $h[0]:0:00' and '2017-09-17 $h[0]:15:00'"}
+		{
+			$h[1]=0;
+		$selectbydate="select * from weatherstation WHERE \"DATETIME\" BETWEEN '2017-09-17 $h[0]:0:00' and '2017-09-17 $h[0]:15:00'";
+	}
   			return array( $h[0] . ":".$h[1],$selectbydate);
 }
 
@@ -168,7 +178,7 @@ if (!is_null($events['events'])) {
 			$jntemptext=split(" ",$text);
 			if($jntemptext[0] == "ภาพ"){
 				$jndata=showtime($jntemptext[1])
-                            $messages = [
+                $messages = [
 				'type' => 'text',
 				'text' => "HI $jndata[0] \n$jndata[1]"
 				// $messages = [
