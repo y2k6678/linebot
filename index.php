@@ -9,7 +9,7 @@ $pass = "e10240d71df70c411f5201bc37491e9091491ff276b8d8b66f8e507ea5b7dc22";
 $db   = "dcv361109jo6fh";
 
 $date=date("Y-m-d");
-function showtime($time,$timequery){
+function showtime($time){
     $h =split(":",$time);
     if($h[1]>=0&&$h[1]<15)
 		{$h[1]=0;
@@ -26,8 +26,7 @@ function showtime($time,$timequery){
     else if($h[1]>=60)
 		{$h[1]=0;
 			$selectbydate="SELECT * FROM weatherstation WHERE \"DATETIME\" BETWEEN '2017-09-17 $h[0]:0:00' and '2017-09-17 $h[0]:15:00'"}
-   $timequery = $selectbydate;
-			return $h[0] . ":".$h[1];
+  			return array( $h[0] . ":".$h[1],$selectbydate);
 }
 
 
@@ -165,12 +164,13 @@ if (!is_null($events['events'])) {
 
 			];	
 			}
-			$jntempquery="";
+			
 			$jntemptext=split(" ",$text);
 			if($jntemptext[0] == "ภาพ"){
+				$jndata=showtime($jntemptext[1])
                             $messages = [
 				'type' => 'text',
-				'text' => "HI ".(showtime($jntemptext[1],$jntempquery))." $jntempquery"
+				'text' => "HI $jndata[0] \n$jndata[1]"
 				// $messages = [
 				// 'type' => 'image',
 				// 'originalContentUrl' => "https://i.imgur.com/yuRTcoH.jpg",
