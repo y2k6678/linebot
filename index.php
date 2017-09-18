@@ -164,7 +164,7 @@ if (!is_null($events['events'])) {
 			if($jntemptext[0] == "ภาพ"){
                             $messages = [
 				'type' => 'text',
-				'text' => "HI ".(showtime($jntemptext[1])
+				'text' => "HI ".(showtime($jntemptext[1]))
 				// $messages = [
 				// 'type' => 'image',
 				// 'originalContentUrl' => "https://i.imgur.com/yuRTcoH.jpg",
