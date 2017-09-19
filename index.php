@@ -178,10 +178,16 @@ if (!is_null($events['events'])) {
 			$jntemptext=split(" ",$text);
 			
 			if($jntemptext[0] == "ภาพ"){
-				$jndata=showtime($jntemptext[1]);	
+				$jndata=showtime($jntemptext[1]);
+				$rs = pg_query($dbconn, $jndata[1]) or die("Cannot execute query: $query\n");
+				$templink="";
+				while ($row = pg_fetch_row($rs)) {
+				  $templink=$row[2];
+				}
 				$messages = [
 				'type' => 'text',
-				'text' => "HI $jndata[0] \n$jndata[1]"
+				'text' => "HI $jndata[0] \n$templink"
+				
 				// $messages = [
 				// 'type' => 'image',
 				// 'originalContentUrl' => "https://i.imgur.com/yuRTcoH.jpg",
