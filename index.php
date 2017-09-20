@@ -163,18 +163,18 @@ if (!is_null($events['events']))
 				$messages = ['type' => 'image', 'originalContentUrl' => $templink, 'previewImageUrl' => $templink];
 			}
 
-			$jntemptext = split(" ", $text);
-			if ($jntemptext[0] == "ภาพ")
+			$textSplited = split(" ", $text);
+			if ($textSplited[0] == "ภาพ")
 			{
-				$jndata = showtime($jntemptext[1]);
-				$rs = pg_query($dbconn, $jndata[1]) or die("Cannot execute query: $query\n");
+				$dataFromshowtime = showtime($textSplited[1]);
+				$rs = pg_query($dbconn, $dataFromshowtime[1]) or die("Cannot execute query: $query\n");
 				$templink = "";
 				while ($row = pg_fetch_row($rs))
 				{
 					$templink = $row[1];
 				}
 
-				//$messages = ['type' => 'text', 'text' => "HI $jndata[0] \n$jndata[1] \n$templink"
+				//$messages = ['type' => 'text', 'text' => "HI $dataFromshowtime[0] \n$dataFromshowtime[1] \n$templink"
 
 				$messages = [
 				'type' => 'image',
