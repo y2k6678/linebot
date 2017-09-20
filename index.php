@@ -196,17 +196,20 @@ if (!is_null($events['events'])) {
 			];
 		
 		}
-				if($text == "ภาพ 1"){
+				if($text == "ภาพ1"){
 					$rs = pg_query($dbconn, $sqlgetlastrecord) or die("Cannot execute query: $query\n");
 					$templink="";
 					while ($row = pg_fetch_row($rs)) {
-					  $templink=$row[2];
+					  $templink=$row[1];
 					}
+					
 					$messages = [
-						'type' => 'text',
-						'text' => "HI ".datetime($templink)	 
-				
-			];	
+					'type' => 'image',
+					'originalContentUrl' => $templink,
+						'previewImageUrl' => $templink
+						
+	
+				];	
 			}
 			
 			/*if($text == "image"){
