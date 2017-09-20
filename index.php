@@ -30,7 +30,7 @@ function showtime($time)
 	if ($h[1] >= 45)
 	{
 		$h[1] = 45;
-		$selectbydate = "select * from weatherstation where \"DATETIME\" BETWEEN '2017-09-17 $h[0]:45:01' and '2017-09-17 $h[0]:59:00'";
+		$selectbydate = "select * from weatherstation where \"DATETIME\" BETWEEN '2017-09-17 $h[0]:45:01' and '2017-09-17 $h[0]:59:59'";
 	}
 	
 
