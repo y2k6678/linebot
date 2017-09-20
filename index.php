@@ -171,7 +171,7 @@ if (!is_null($events['events']))
 				$templink = "";
 				while ($row = pg_fetch_row($rs))
 				{
-					$templink = $row[2];
+					$templink = $row[1];
 				}
 
 				$messages = ['type' => 'text', 'text' => "HI $jndata[0] \n$jndata[1] \n$templink"
