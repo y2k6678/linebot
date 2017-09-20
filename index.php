@@ -174,12 +174,12 @@ if (!is_null($events['events']))
 					$templink = $row[1];
 				}
 
-				$messages = ['type' => 'text', 'text' => "HI $jndata[0] \n$jndata[1] \n$templink"
+				//$messages = ['type' => 'text', 'text' => "HI $jndata[0] \n$jndata[1] \n$templink"
 
-				// $messages = [
-				// 'type' => 'image',
-				// 'originalContentUrl' => "https://i.imgur.com/yuRTcoH.jpg",
-				// 	'previewImageUrl' => "https://i.imgur.com/yuRTcoH.jpg"
+				$messages = [
+				'type' => 'image',
+				'originalContentUrl' => $templink,
+					'previewImageUrl' => $templink
 
 				];
 			}
