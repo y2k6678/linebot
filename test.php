@@ -6,11 +6,11 @@ $db = "dcv361109jo6fh";
 
 $dbconn = pg_connect("host=" . $GLOBALS['host'] . " port=5432 dbname=" . $GLOBALS['db'] . " user=" . $GLOBALS['user'] . " password=" . $GLOBALS['pass']) or die('Could not connect: ' . pg_last_error());
 
-$sqlgetlastrecord = "select * from weatherstation order by \"DATETIME\" desc limit 1";
+$sqlgetlastrecord = "select * from weatherstation order by \"DATETIME\" desc limit 10";
 $rs = pg_query($dbconn, $sqlgetlastrecord) or die("Cannot execute query: $query\n");
-$row = pg_fetch_row($rs)
-
-echo  $row[0]." ".$row[1];
-
+while ($row = pg_fetch_row($rs))
+{//
+    echo  $row[0]." ".$row[1];
+}
 
 ?>
