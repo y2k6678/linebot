@@ -9,7 +9,7 @@ $date = date("Y-m-d");
 function showtime($time)
 {
 	$h = split(":", $time);
-	if ($h[1] >= 0 && $h[1] < 15)
+	if ($h[1] < 15)
 	{
 		$h[1] = 0;
 		$selectbydate = "select * from weatherstation where \"DATETIME\" BETWEEN '2017-09-17 $h[0]:0:00' and '2017-09-17 $h[0]:15:00'";
