@@ -12,25 +12,25 @@ function showtime($time)
 	$h = split(":", $time);
 	if ($h[1] < 15)
 	{
-		$h[1] = 0;
+		$h[1] = "00";
 		$selectbydate = "select * from weatherstation where \"DATETIME\" BETWEEN '$date $h[0]:0:00' and '$date $h[0]:15:00' order by \"DATETIME\" desc limit 1";
 	}
 	else
 	if ($h[1] >= 15 && $h[1] < 30)
 	{
-		$h[1] = 15;
+		$h[1] = "15";
 		$selectbydate = "select * from weatherstation where \"DATETIME\" BETWEEN '$date $h[0]:15:01' and '$date $h[0]:30:00' order by \"DATETIME\" desc limit 1";
 	}
 	else
 	if ($h[1] >= 30 && $h[1] < 45)
 	{
-		$h[1] = 30;//
+		$h[1] = "30";
 		$selectbydate = "select * from weatherstation where \"DATETIME\" BETWEEN '$date $h[0]:30:01' and '$date $h[0]:45:00' order by \"DATETIME\" desc limit 1";
 	}
 	else
 	if ($h[1] >= 45)
 	{
-		$h[1] = 45;
+		$h[1] = "45";
 		$selectbydate = "select * from weatherstation where \"DATETIME\" BETWEEN '$date $h[0]:45:01' and '$date $h[0]:59:59' order by \"DATETIME\" desc limit 1";
 	}
 	
