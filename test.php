@@ -9,7 +9,7 @@ $dbconn = pg_connect("host=" . $GLOBALS['host'] . " port=5432 dbname=" . $GLOBAL
 $sqlgetlastrecord = "select * from weatherstation order by \"DATETIME\" desc limit 1";
 $rs = pg_query($dbconn, $dataFromshowtime[1]) or die("Cannot execute query: $query\n");
 while ($row = pg_fetch_row($rs))
-{
+{//
     echo  $row[0]." ".$row[1];
 }
 
