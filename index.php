@@ -31,7 +31,8 @@ function showtime($time)
 	{
 		$h[1] = 45;
 		$selectbydate = "select * from weatherstation where \"DATETIME\" BETWEEN '2017-09-17 $h[0]:45:01' and '2017-09-17 $h[0]:59:99'";
-	}	
+	}
+	
 
 	return array(
 		$h[0] . ":" . $h[1],
