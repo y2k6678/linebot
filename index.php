@@ -4,6 +4,7 @@ $host = "ec2-107-22-211-182.compute-1.amazonaws.com";
 $user = "mmdkvvqziulstc";
 $pass = "e10240d71df70c411f5201bc37491e9091491ff276b8d8b66f8e507ea5b7dc22";
 $db = "dcv361109jo6fh";
+date_default_timezone_set("Asia/Bangkok");
 $date = date("Y-m-d");
 
 function showtime($time)
