@@ -154,7 +154,6 @@ if (!is_null($events['events']))
 				{
 					$templink = $row[1];
 				}
-
 				$messages = ['type' => 'image', 'originalContentUrl' => $templink, 'previewImageUrl' => $templink];
 			}
 
