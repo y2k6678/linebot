@@ -190,9 +190,9 @@ if (!is_null($events['events']))
 
 				$messages = ['type' => 'image', 'originalContentUrl' => $templink, 'previewImageUrl' => $templink];
 			}
-			if ($text == "qw")
+			if ($text == "map")
 			{
-				$messages = ['type' => 'location','title'=> 'my location','address'=> '〒150-0002 東京都渋谷区渋谷２丁目２１−１',
+				$messages = ['type' => 'location','title'=> 'my location','address'=> 'เคลิ้ม',
 				'latitude'=> 8.652311,'longitude'=> 99.918031];
 			}
 
