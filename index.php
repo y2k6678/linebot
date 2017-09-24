@@ -88,7 +88,7 @@ if (!is_null($events['events']))
 
 			// Build message to reply back
 
-			$messages = ['type' => 'text', 'text' => "ไม่มีคำสั่งที่คุณพิมพ์ "."\n"."พิมพ์ตัวอักษรตามที่กำหนดให้" ."\n" ."\n". "[help] เพื่อดูเมนู" . "\n" . "[help] Show Status"
+			$messages = ['type' => 'text', 'text' => "ไม่มีคำสั่งที่คุณพิมพ์ "."\n"."พิมพ์ตัวอักษรตามที่กำหนดให้" ."\n" ."\n". "[help] เพื่อดูเมนู" . "\n" . "[help] Show Menu"
 
 			// "text"
 
@@ -100,7 +100,7 @@ if (!is_null($events['events']))
 
 			if (strtoupper($text) == "WEAT")
 			{
-				$messages = ['type' => 'text', 'text' => "สถานที่ : " . "มหาวิทยาลัยวลัยลักษณ์" . "\n" . "ความสว่างของแสง : " . $Light . "\n" . "อุณหภูมิ C :" . $TEM . "\n" . "ความชื้น :" . $HUM . " %" . "\n" . "พิมพ์ [help] เพื่อดูเมนู"];
+				$messages = ['type' => 'text', 'text' => "สถานที่ : " . "มหาวิทยาลัยวลัยลักษณ์" . "\n" . "ความสว่างของแสง : " . $Light . "\n" . "อุณหภูมิ C :" . $TEM . "\n" . "ความชื้น :" . $HUM . " %" . "\n"."\n" . "[help] เพื่อดูเมนู"];
 			}
 
 			if (trim($text) == "แสง")
