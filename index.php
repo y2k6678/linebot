@@ -88,7 +88,7 @@ if (!is_null($events['events']))
 
 			// Build message to reply back
 
-			$messages = ['type' => 'text', 'text' => "ไม่มีคำสั่งที่คุณพิมพ์ "."\n"."ใส่ตัวอักษรที่ต้องการได้เลย" . "\n" . "กรุณาพิมพ์ [help] เพื่อดูเมนู" . "\n" . "[help] Show Status"
+			$messages = ['type' => 'text', 'text' => "ไม่มีคำสั่งที่คุณพิมพ์ "."\n"."ใส่ตัวอักษรที่ต้องการได้เลย" . "\n"."\n" ."\n". "กรุณาพิมพ์ [help] เพื่อดูเมนู" . "\n" . "[help] Show Status"
 
 			// "text"
 
