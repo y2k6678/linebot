@@ -88,7 +88,7 @@ if (!is_null($events['events']))
 
 			// Build message to reply back
 
-			$messages = ['type' => 'text', 'text' => "ไม่มีคำสั่งที่คุณพิมพ์ "."\n"."พิมพ์ตัวอักษรตามที่กำหนดให้" ."\n" ."\n". "[help] เพื่อดูเมนู" . "\n" . "[help] Show Menu"
+			$messages = ['type' => 'text', 'text' => "ไม่มีคำสั่งที่คุณพิมพ์ "."\n"."พิมพ์ตัวอักษรตามที่กำหนดให้" ."\n" ."\n". "[help] เพื่อดูเมนู & Show Menu" 
 
 			// "text"
 
@@ -129,12 +129,6 @@ if (!is_null($events['events']))
 
 			
 
-			
-
-			if (trim($text) == "2")
-			{
-				$messages = ['type' => 'text', 'text' => "" . "\n"];
-			}
 
 			if (strtoupper($text) == "HI")
 			{
