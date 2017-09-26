@@ -104,7 +104,7 @@ if (!is_null($events['events']))
 			}
 
 			 trim($str));
-			if ( ereg_replace('[[:space:]]+', '', trim($text)) == "แสง")
+			if ( ereg_replace(trim($text)) == "แสง")
 			{
 				if ($Light > 900)
 				{
