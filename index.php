@@ -130,7 +130,7 @@ if (!is_null($events['events']))
 			
 
 
-			if (strtoupper($text) == "HI")
+			if (trim(strtoupper($text)) == "HI")
 			{
 				$messages = ['type' => 'text', 'text' => "hello"];
 			}
