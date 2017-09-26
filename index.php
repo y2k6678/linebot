@@ -93,7 +93,7 @@ if (!is_null($events['events']))
 			// "text"
 
 			];
-			if (strtoupper($text) == "HELP")
+			if ((ereg_replace('[[:space:]]+', '', strtoupper($text)) == "HELP")
 			{
 				$messages = ['type' => 'text', 'text' => "พิมพ์ตัวอักษรตามที่กำหนดให้"."\n"."\n"."[weat] เพื่อดูสถานะอากาศปัจจุบัน" . "\n"  . "[ภาพ] เพื่อดูรูปล่าสุด"."\n"."[ภาพ 00:00] พิมพ์ภาพตามช่วงเวลา"."\n"."#อุปกรณ์จะถ่ายรูปทุกๆ 15 นาที"];
 			}
@@ -141,7 +141,7 @@ if (!is_null($events['events']))
 				$messages = ['type' => 'image', 'originalContentUrl' => "https://sv6.postjung.com/picpost/data/184/184340-1-2995.jpg", 'previewImageUrl' => "https://sv6.postjung.com/picpost/data/184/184340-1-2995.jpg"];
 			}
 
-			if ($text == "ภาพ")
+			if ( ereg_replace('[[:space:]]+', '', trim($text)) == "ภาพ")
 			{
 				$rs = pg_query($dbconn, $sqlgetlastrecord) or die("Cannot execute query: $query\n");
 				$templink = "";
