@@ -93,7 +93,7 @@ if (!is_null($events['events']))
 			// "text"
 
 			];
-			if ((ereg_replace('[[:space:]]+', '', strtoupper($text)) == "HELP")
+			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "HELP")
 			{
 				$messages = ['type' => 'text', 'text' => "พิมพ์ตัวอักษรตามที่กำหนดให้"."\n"."\n"."[weat] เพื่อดูสถานะอากาศปัจจุบัน" . "\n"  . "[ภาพ] เพื่อดูรูปล่าสุด"."\n"."[ภาพ 00:00] พิมพ์ภาพตามช่วงเวลา"."\n"."#อุปกรณ์จะถ่ายรูปทุกๆ 15 นาที"];
 			}
