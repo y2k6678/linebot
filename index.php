@@ -103,7 +103,8 @@ if (!is_null($events['events']))
 				$messages = ['type' => 'text', 'text' => "สถานที่ : " . "มหาวิทยาลัยวลัยลักษณ์" . "\n" . "ความสว่างของแสง : " . $Light . "\n" . "อุณหภูมิ C :" . $TEM . "\n" . "ความชื้น :" . $HUM . " %" . "\n"."\n" . "[help] เพื่อดูเมนู"];
 			}
 
-			if (trim($text) == "แสง")
+			 trim($str));
+			if ( ereg_replace('[[:space:]]+', '', trim($text)) == "แสง")
 			{
 				if ($Light > 900)
 				{
