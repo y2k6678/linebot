@@ -56,7 +56,8 @@ $events = json_decode($content, true);
 
 // Validate parsed JSON data
 
-$Light = file_get_contents('https://api.thingspeak.com/channels/262354/fields/1/last.txt');
+$Light = file_get_contents('https://api.thingspeak.com/channels/331361/fields/3/last.txt');
+$water = file_get_contents('https://api.thingspeak.com/channels/331361/fields/4/last.txt');
 $HUM = file_get_contents('https://api.thingspeak.com/channels/262354/fields/2/last.txt');
 $TEM = file_get_contents('https://api.thingspeak.com/channels/262354/fields/3/last.txt');
 $aba = ('https://i.imgur.com//yuRTcoH.jpg');
@@ -98,11 +99,12 @@ if (!is_null($events['events']))
 				$messages = ['type' => 'text', 'text' => "พิมพ์ตัวอักษรตามที่กำหนดให้"."\n"."\n"."[weat] เพื่อดูสถานะอากาศปัจจุบัน" . "\n"  . "[ภาพ] เพื่อดูรูปล่าสุด"."\n"."[ภาพ 00:00] พิมพ์ภาพตามช่วงเวลา"."\n"."#อุปกรณ์จะถ่ายรูปทุกๆ 15 นาที"];
 			}
 
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEAT")
+			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEAT"){
+				if($water>240)
 			{
 				$messages = ['type' => 'text', 'text' => "สถานที่ : " . "มหาวิทยาลัยวลัยลักษณ์" . "\n" . "ความสว่างของแสง : " . $Light . "\n" . "อุณหภูมิ C :" . $TEM . "\n" . "ความชื้น :" . $HUM . " %" . "\n"."\n" . "[help] เพื่อดูเมนู"];
 			}
-
+			}
 		
 			if ( ereg_replace('[[:space:]]+', '', trim($text)) == "แสง")
 			{
