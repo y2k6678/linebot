@@ -110,6 +110,46 @@ if (!is_null($events['events']))
 			}
 			
 			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEAT"){
+				if($Light > 100)
+				{
+				if($water<240)
+			{
+				$messages = ['type' => 'text', 'text' => "สถานที่ : " . "มหาวิทยาลัยวลัยลักษณ์" . "\n" . "ความสว่างของแสง : " . "เริ่มมืด" . "\n" . "อุณหภูมิ C :" . $TEM . "\n" . "ความชื้น :" . $HUM . " %" . "\n"."ฝน : มีฝนประปลาย"."\n"."\n" . "[help] เพื่อดูเมนู"];
+			}
+			}
+			}
+			
+			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEAT"){
+				if($Light > 100)
+				{
+				if($water<180)
+			{
+				$messages = ['type' => 'text', 'text' => "สถานที่ : " . "มหาวิทยาลัยวลัยลักษณ์" . "\n" . "ความสว่างของแสง : " . "เริ่มมืด" . "\n" . "อุณหภูมิ C :" . $TEM . "\n" . "ความชื้น :" . $HUM . " %" . "\n"."ฝน : ฝนตกไม่หนัก"."\n"."\n" . "[help] เพื่อดูเมนู"];
+			}
+			}
+			}
+			
+			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEAT"){
+				if($Light > 100)
+				{
+				if($water<140)
+			{
+				$messages = ['type' => 'text', 'text' => "สถานที่ : " . "มหาวิทยาลัยวลัยลักษณ์" . "\n" . "ความสว่างของแสง : " . "เริ่มมืด" . "\n" . "อุณหภูมิ C :" . $TEM . "\n" . "ความชื้น :" . $HUM . " %" . "\n"."ฝน : ฝนตก"."\n"."\n" . "[help] เพื่อดูเมนู"];
+			}
+			}
+			}
+			
+			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEAT"){
+				if($Light > 100)
+				{
+				if($water<100)
+			{
+				$messages = ['type' => 'text', 'text' => "สถานที่ : " . "มหาวิทยาลัยวลัยลักษณ์" . "\n" . "ความสว่างของแสง : " . "เริ่มมืด" . "\n" . "อุณหภูมิ C :" . $TEM . "\n" . "ความชื้น :" . $HUM . " %" . "\n"."ฝน : ฝนตกหนัก"."\n"."\n" . "[help] เพื่อดูเมนู"];
+			}
+			}
+			}
+			
+			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEAT"){
 				if($Light > 150)
 				{
 				if($water>240)
