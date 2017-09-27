@@ -99,6 +99,7 @@ if (!is_null($events['events']))
 				$messages = ['type' => 'text', 'text' => "พิมพ์ตัวอักษรตามที่กำหนดให้"."\n"."\n"."[weat] เพื่อดูสถานะอากาศปัจจุบัน" . "\n"  . "[ภาพ] เพื่อดูรูปล่าสุด"."\n"."[ภาพ 00:00] พิมพ์ภาพตามช่วงเวลา"."\n"."#อุปกรณ์จะถ่ายรูปทุกๆ 15 นาที"];
 			}
 
+			//BeginCase
 			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEAT"){
 				if($Light > 100)
 				{
@@ -210,6 +211,47 @@ if (!is_null($events['events']))
 			}
 			
 			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEAT"){
+				if($Light < 70)
+				{
+				if($water<240)
+			{
+				$messages = ['type' => 'text', 'text' => "สถานที่ : " . "มหาวิทยาลัยวลัยลักษณ์" . "\n" . "ความสว่างของแสง : " . "มีแดดบางเป็นบางจุด" . "\n" . "อุณหภูมิ C :" . $TEM . "\n" . "ความชื้น :" . $HUM . " %" . "\n"."ฝน : มีฝนประปลาย"."\n"."\n" . "[help] เพื่อดูเมนู"];
+			}
+			}
+			}
+			
+			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEAT"){
+				if($Light < 70)
+				{
+				if($water<180)
+			{
+				$messages = ['type' => 'text', 'text' => "สถานที่ : " . "มหาวิทยาลัยวลัยลักษณ์" . "\n" . "ความสว่างของแสง : " . "มีแดดบางเป็นบางจุด" . "\n" . "อุณหภูมิ C :" . $TEM . "\n" . "ความชื้น :" . $HUM . " %" . "\n"."ฝน : ฝนตกไม่หนัก"."\n"."\n" . "[help] เพื่อดูเมนู"];
+			}
+			}
+			}
+			
+			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEAT"){
+				if($Light < 70)
+				{
+				if($water<140)
+			{
+				$messages = ['type' => 'text', 'text' => "สถานที่ : " . "มหาวิทยาลัยวลัยลักษณ์" . "\n" . "ความสว่างของแสง : " . "มีแดดบางเป็นบางจุด" . "\n" . "อุณหภูมิ C :" . $TEM . "\n" . "ความชื้น :" . $HUM . " %" . "\n"."ฝน : ฝนตก"."\n"."\n" . "[help] เพื่อดูเมนู"];
+			}
+			}
+			}
+			
+			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEAT"){
+				if($Light < 70)
+				{
+				if($water<100)
+			{
+				$messages = ['type' => 'text', 'text' => "สถานที่ : " . "มหาวิทยาลัยวลัยลักษณ์" . "\n" . "ความสว่างของแสง : " . "มีแดดบางเป็นบางจุด" . "\n" . "อุณหภูมิ C :" . $TEM . "\n" . "ความชื้น :" . $HUM . " %" . "\n"."ฝน : ฝนตกหนัก"."\n"."\n" . "[help] เพื่อดูเมนู"];
+			}
+			}
+			}
+			
+			
+			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEAT"){
 				if($Light < 30)
 				{
 				if($water>240)
@@ -219,14 +261,48 @@ if (!is_null($events['events']))
 			}
 			}
 			
+			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEAT"){
+				if($Light < 30)
+				{
+				if($water<240)
+			{
+				$messages = ['type' => 'text', 'text' => "สถานที่ : " . "มหาวิทยาลัยวลัยลักษณ์" . "\n" . "ความสว่างของแสง : " . "มีแดดอากาศดี" . "\n" . "อุณหภูมิ C :" . $TEM . "\n" . "ความชื้น :" . $HUM . " %" . "\n"."ฝน : มีฝนประปลาย"."\n"."\n" . "[help] เพื่อดูเมนู"];
+			}
+			}
+			}
+			
+			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEAT"){
+				if($Light < 30)
+				{
+				if($water<180)
+			{
+				$messages = ['type' => 'text', 'text' => "สถานที่ : " . "มหาวิทยาลัยวลัยลักษณ์" . "\n" . "ความสว่างของแสง : " . "มีแดดอากาศดี" . "\n" . "อุณหภูมิ C :" . $TEM . "\n" . "ความชื้น :" . $HUM . " %" . "\n"."ฝน : ฝนตกไม่หนัก"."\n"."\n" . "[help] เพื่อดูเมนู"];
+			}
+			}
+			}
+			
+			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEAT"){
+				if($Light < 30)
+				{
+				if($water<140)
+			{
+				$messages = ['type' => 'text', 'text' => "สถานที่ : " . "มหาวิทยาลัยวลัยลักษณ์" . "\n" . "ความสว่างของแสง : " . "มีแดดอากาศดี" . "\n" . "อุณหภูมิ C :" . $TEM . "\n" . "ความชื้น :" . $HUM . " %" . "\n"."ฝน : ฝนตก"."\n"."\n" . "[help] เพื่อดูเมนู"];
+			}
+			}
+			}
 			
 			
+			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEAT"){
+				if($Light < 30)
+				{
+				if($water<100)
+			{
+				$messages = ['type' => 'text', 'text' => "สถานที่ : " . "มหาวิทยาลัยวลัยลักษณ์" . "\n" . "ความสว่างของแสง : " . "มีแดดอากาศดี" . "\n" . "อุณหภูมิ C :" . $TEM . "\n" . "ความชื้น :" . $HUM . " %" . "\n"."ฝน : ฝนตกหนัก"."\n"."\n" . "[help] เพื่อดูเมนู"];
+			}
+			}
+			}
 			
-			
-			
-			
-			
-
+			//EndCase
 
 			if (trim(strtoupper($text)) == "HI")
 			{
@@ -269,7 +345,7 @@ if (!is_null($events['events']))
 
 				];
 			}
-
+/*
 			if ($text == "ภาพ")
 			{
 				$rs = pg_query($dbconn, $sqlgetlastrecord) or die("Cannot execute query: $query\n");
@@ -280,7 +356,7 @@ if (!is_null($events['events']))
 				}
 
 				$messages = ['type' => 'image', 'originalContentUrl' => $templink, 'previewImageUrl' => $templink];
-			}
+			}*/
 			if ($text == "map")
 			{
 				$messages = ['type' => 'location','title'=> 'my location','address'=> 'เคลิ้ม',
