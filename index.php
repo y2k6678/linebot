@@ -345,7 +345,7 @@ if (!is_null($events['events']))
 
 				];
 			}
-/*
+
 			if ($text == "ภาพ")
 			{
 				$rs = pg_query($dbconn, $sqlgetlastrecord) or die("Cannot execute query: $query\n");
@@ -356,7 +356,7 @@ if (!is_null($events['events']))
 				}
 
 				$messages = ['type' => 'image', 'originalContentUrl' => $templink, 'previewImageUrl' => $templink];
-			}*/
+			}
 			if ($text == "map")
 			{
 				$messages = ['type' => 'location','title'=> 'my location','address'=> 'เคลิ้ม',
