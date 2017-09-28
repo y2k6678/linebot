@@ -362,7 +362,7 @@ if (!is_null($events['events']))
 
 			}
 
-			if ($text == "photo")
+			if ($text == "ภาพ")
 			{
 				$rs = pg_query($dbconn, $sqlgetlastrecord) or die("Cannot execute query: $query\n");
 				$templink = "";
