@@ -315,7 +315,7 @@ if (!is_null($events['events']))
 			}
 			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "INFO")
 			{
-				$messages = ['type' => 'text', 'text' => "มหาวิทยาลัยวลัยลักษณ์ อ่านเพิ่มเติม: https://www.wu.ac.th"];
+				$messages = ['type' => 'text', 'text' => "มหาวิทยาลัยวลัยลักษณ์" ."\n"."อ่านเพิ่มเติม: https://www.wu.ac.th"];
 			}
 				
 			if ( ereg_replace('[[:space:]]+', '', trim($text)) == "ภาพ")
