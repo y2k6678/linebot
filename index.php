@@ -89,18 +89,18 @@ if (!is_null($events['events']))
 
 			// Build message to reply back
 
-			$messages = ['type' => 'text', 'text' => "ไม่มีคำสั่งที่คุณพิมพ์ "."\n"."พิมพ์ตัวอักษรตามที่กำหนดให้" ."\n" ."\n". "[help] เพื่อดูเมนู & Show Menu" 
+			$messages = ['type' => 'text', 'text' => "ไม่มีคำสั่งที่คุณพิมพ์ "."\n"."พิมพ์ตัวอักษรตามที่กำหนดให้" ."\n" ."\n". "[help] เพื่อดูเมนู" 
 
 			// "text"
 
 			];
 			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "HELP")
 			{
-				$messages = ['type' => 'text', 'text' => "พิมพ์ตัวอักษรตามที่กำหนดให้"."\n"."\n"."[weat] เพื่อดูสถานะอากาศปัจจุบัน" . "\n"  . "[ภาพ] เพื่อดูรูปล่าสุด"."\n"."[ภาพ 00:00] พิมพ์ภาพตามช่วงเวลา"."\n"."#อุปกรณ์จะถ่ายรูปทุกๆ 15 นาที"];
+				$messages = ['type' => 'text', 'text' => "พิมพ์ตัวอักษรตามที่กำหนดให้"."\n"."\n"."[WEATHER] เพื่อดูสถานะอากาศปัจจุบัน" . "\n"  . "[photo] เพื่อดูรูปล่าสุด"."\n"."[photo 00:00] พิมพ์ภาพตามช่วงเวลา"."\n"."#อุปกรณ์จะถ่ายรูปทุกๆ 15 นาที"];
 			}
 
 			//BeginCase
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEAT"){
+			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
 				if($Light > 100)
 				{
 				if($water>240)
@@ -110,7 +110,7 @@ if (!is_null($events['events']))
 			}
 			}
 			
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEAT"){
+			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
 				if($Light > 100)
 				{
 				if($water<240)
@@ -120,7 +120,7 @@ if (!is_null($events['events']))
 			}
 			}
 			
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEAT"){
+			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
 				if($Light > 100)
 				{
 				if($water<180)
@@ -130,7 +130,7 @@ if (!is_null($events['events']))
 			}
 			}
 			
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEAT"){
+			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
 				if($Light > 100)
 				{
 				if($water<140)
@@ -140,7 +140,7 @@ if (!is_null($events['events']))
 			}
 			}
 			
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEAT"){
+			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
 				if($Light > 100)
 				{
 				if($water<100)
@@ -150,7 +150,7 @@ if (!is_null($events['events']))
 			}
 			}
 			
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEAT"){
+			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
 				if($Light > 150)
 				{
 				if($water>240)
@@ -160,7 +160,7 @@ if (!is_null($events['events']))
 			}
 			}
 			
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEAT"){
+			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
 				if($Light > 150)
 				{
 				if($water<240)
@@ -170,7 +170,7 @@ if (!is_null($events['events']))
 			}
 			}
 			
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEAT"){
+			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
 				if($Light > 150)
 				{
 				if($water<180)
@@ -180,7 +180,7 @@ if (!is_null($events['events']))
 			}
 			}
 			
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEAT"){
+			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
 				if($Light > 150)
 				{
 				if($water<140)
@@ -190,7 +190,7 @@ if (!is_null($events['events']))
 			}
 			}
 			
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEAT"){
+			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
 				if($Light > 150)
 				{
 				if($water<100)
@@ -200,7 +200,7 @@ if (!is_null($events['events']))
 			}
 			}
 			
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEAT"){
+			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
 				if($Light < 70)
 				{
 				if($water>240)
@@ -210,7 +210,7 @@ if (!is_null($events['events']))
 			}
 			}
 			
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEAT"){
+			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
 				if($Light < 70)
 				{
 				if($water<240)
@@ -220,7 +220,7 @@ if (!is_null($events['events']))
 			}
 			}
 			
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEAT"){
+			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
 				if($Light < 70)
 				{
 				if($water<180)
@@ -230,7 +230,7 @@ if (!is_null($events['events']))
 			}
 			}
 			
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEAT"){
+			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
 				if($Light < 70)
 				{
 				if($water<140)
@@ -240,7 +240,7 @@ if (!is_null($events['events']))
 			}
 			}
 			
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEAT"){
+			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
 				if($Light < 70)
 				{
 				if($water<100)
@@ -251,7 +251,7 @@ if (!is_null($events['events']))
 			}
 			
 			
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEAT"){
+			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
 				if($Light < 30)
 				{
 				if($water>240)
@@ -261,7 +261,7 @@ if (!is_null($events['events']))
 			}
 			}
 			
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEAT"){
+			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
 				if($Light < 30)
 				{
 				if($water<240)
@@ -271,7 +271,7 @@ if (!is_null($events['events']))
 			}
 			}
 			
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEAT"){
+			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
 				if($Light < 30)
 				{
 				if($water<180)
@@ -281,7 +281,7 @@ if (!is_null($events['events']))
 			}
 			}
 			
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEAT"){
+			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
 				if($Light < 30)
 				{
 				if($water<140)
@@ -292,7 +292,7 @@ if (!is_null($events['events']))
 			}
 			
 			
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEAT"){
+			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
 				if($Light < 30)
 				{
 				if($water<100)
