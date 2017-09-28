@@ -353,8 +353,8 @@ if ($qcount > 0){
 				else {
 					$messages = [
 						'type' => 'image',
-						'originalContentUrl' => "https://imgur.com/h6VMxzm",
-							'previewImageUrl' => "https://imgur.com/h6VMxzm"
+						'originalContentUrl' => "https://imgur.com/h6VMxzm.jpg",
+							'previewImageUrl' => "https://imgur.com/h6VMxzm.jpg" 
 		
 						];
 
