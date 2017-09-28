@@ -313,6 +313,15 @@ if (!is_null($events['events']))
 			{
 				$messages = ['type' => 'image', 'originalContentUrl' => "https://sv6.postjung.com/picpost/data/184/184340-1-2995.jpg", 'previewImageUrl' => "https://sv6.postjung.com/picpost/data/184/184340-1-2995.jpg"];
 			}
+			if ($text == "info")
+			{
+				
+				"type": "text",
+    
+				$messages = ['type' => 'text', 
+					    'text' => "มหาวิทยาลัยวลัยลักษณ์ 
+						อ่านเิ่มเติม: https://www.wu.ac.th/"];
+			}
 
 			if ( ereg_replace('[[:space:]]+', '', trim($text)) == "ภาพ")
 			{
