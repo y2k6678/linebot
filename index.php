@@ -353,8 +353,8 @@ if (!is_null($events['events']))
 				else {
 					$messages = [
 						'type' => 'image',
-						'originalContentUrl' => "https://imgur.com/h6VMxzm.jpg",
-							'previewImageUrl' => "https://imgur.com/h6VMxzm.jpg" 
+						'originalContentUrl' => "https://imgur.com/aOWIijh.jpg",
+							'previewImageUrl' => "https://imgur.com/aOWIijh.jpg" 
 		
 						];
 
