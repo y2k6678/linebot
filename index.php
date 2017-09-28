@@ -58,8 +58,8 @@ $events = json_decode($content, true);
 
 $Light = file_get_contents('https://api.thingspeak.com/channels/331361/fields/3/last.txt');
 $water = file_get_contents('https://api.thingspeak.com/channels/331361/fields/4/last.txt');
-$HUM = file_get_contents('https://api.thingspeak.com/channels/262354/fields/2/last.txt');
-$TEM = file_get_contents('https://api.thingspeak.com/channels/262354/fields/3/last.txt');
+$HUM = file_get_contents('https://api.thingspeak.com/channels/331361/fields/2/last.txt');
+$TEM = file_get_contents('https://api.thingspeak.com/channels/331361/fields/1/last.txt');
 $aba = ('https://i.imgur.com//yuRTcoH.jpg');
 
 // convert
