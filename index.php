@@ -334,20 +334,32 @@ if (!is_null($events['events']))
 			{
 				$dataFromshowtime = showtime($textSplited[1]);
 				$rs = pg_query($dbconn, $dataFromshowtime[1]) or die("Cannot execute query: $query\n");
-				$templink = "";
+				$templink = ""; 
+				$qcount=0;
 				while ($row = pg_fetch_row($rs))
 				{
 					$templink = $row[1];
+					$qcount++;
 				}
 
 				//$messages = ['type' => 'text', 'text' => "HI $dataFromshowtime[0] \n$dataFromshowtime[1] \n$templink"
-
+if ($qcount > 0){
 				$messages = [
 				'type' => 'image',
 				'originalContentUrl' => $templink,
 					'previewImageUrl' => $templink
 
-				];
+				];}
+				else {
+					$messages = [
+						'type' => 'image',
+						'originalContentUrl' => "https://imgur.com/h6VMxzm",
+							'previewImageUrl' => "https://imgur.com/h6VMxzm"
+		
+						];
+
+				}
+
 			}
 
 			if ($text == "ภาพ")
