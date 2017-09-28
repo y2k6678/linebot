@@ -318,7 +318,7 @@ if (!is_null($events['events']))
 				$messages = ['type' => 'text', 'text' => "เป็นมหาวิทยาลัยของรัฐ และอยู่ในกำกับของรัฐบาลที่ได้รับพระมหากรุณาธิคุณจากพระบาทสมเด็จพระเจ้าอยู่หัว พระราชทานชื่ออันเป็นสร้อยพระนามในสมเด็จพระเจ้าลูกเธอ เจ้าฟ้าจุฬาภรณวลัยลักษณ์อัครราชกุมารี" ."\n"."อ่านเพิ่มเติม: https://www.wu.ac.th"];
 			}
 				
-			if ( ereg_replace('[[:space:]]+', '', trim($text)) == "ภาพ")
+			if ( ereg_replace('[[:space:]]+', '', trim($text)) == "photo")
 			{
 				$rs = pg_query($dbconn, $sqlgetlastrecord) or die("Cannot execute query: $query\n");
 				$templink = "";
@@ -330,7 +330,7 @@ if (!is_null($events['events']))
 			}
 
 			$textSplited = split(" ", $text);
-			if ($textSplited[0] == "ภาพ")
+			if ($textSplited[0] == "photo")
 			{
 				$dataFromshowtime = showtime($textSplited[1]);
 				$rs = pg_query($dbconn, $dataFromshowtime[1]) or die("Cannot execute query: $query\n");
@@ -362,7 +362,7 @@ if (!is_null($events['events']))
 
 			}
 
-			if ($text == "ภาพ")
+			if ($text == "photo")
 			{
 				$rs = pg_query($dbconn, $sqlgetlastrecord) or die("Cannot execute query: $query\n");
 				$templink = "";
