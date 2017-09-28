@@ -100,7 +100,7 @@ if (!is_null($events['events']))
 			}
 
 			//BeginCase
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
+			if (ereg_replace('[[:space:]]+', '', trim($text)) == "อากาศ"){
 				if($Light > 100)
 				{
 				if($water>240)
@@ -110,7 +110,7 @@ if (!is_null($events['events']))
 			}
 			}
 			
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
+			if (ereg_replace('[[:space:]]+', '', trim($text)) == "อากาศ"){
 				if($Light > 100)
 				{
 				if($water<240)
@@ -120,7 +120,7 @@ if (!is_null($events['events']))
 			}
 			}
 			
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
+			if (ereg_replace('[[:space:]]+', '', trim($text)) == "อากาศ"){
 				if($Light > 100)
 				{
 				if($water<180)
@@ -130,7 +130,7 @@ if (!is_null($events['events']))
 			}
 			}
 			
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
+			if (ereg_replace('[[:space:]]+', '', trim($text)) == "อากาศ"){
 				if($Light > 100)
 				{
 				if($water<140)
@@ -140,7 +140,7 @@ if (!is_null($events['events']))
 			}
 			}
 			
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
+			if (ereg_replace('[[:space:]]+', '', trim($text)) == "อากาศ"){
 				if($Light > 100)
 				{
 				if($water<100)
@@ -150,7 +150,7 @@ if (!is_null($events['events']))
 			}
 			}
 			
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
+			if (ereg_replace('[[:space:]]+', '', trim($text)) == "อากาศ"){
 				if($Light > 150)
 				{
 				if($water>240)
@@ -160,7 +160,7 @@ if (!is_null($events['events']))
 			}
 			}
 			
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
+			if (ereg_replace('[[:space:]]+', '', trim($text)) == "อากาศ"){
 				if($Light > 150)
 				{
 				if($water<240)
@@ -170,7 +170,7 @@ if (!is_null($events['events']))
 			}
 			}
 			
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
+			if (ereg_replace('[[:space:]]+', '', trim($text)) == "อากาศ"){
 				if($Light > 150)
 				{
 				if($water<180)
@@ -180,7 +180,7 @@ if (!is_null($events['events']))
 			}
 			}
 			
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
+			if (ereg_replace('[[:space:]]+', '', trim($text)) == "อากาศ"){
 				if($Light > 150)
 				{
 				if($water<140)
@@ -190,7 +190,7 @@ if (!is_null($events['events']))
 			}
 			}
 			
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
+			if (ereg_replace('[[:space:]]+', '', trim($text)) == "อากาศ"){
 				if($Light > 150)
 				{
 				if($water<100)
@@ -200,7 +200,7 @@ if (!is_null($events['events']))
 			}
 			}
 			
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
+			if (ereg_replace('[[:space:]]+', '', trim($text)) == "อากาศ"){
 				if($Light < 70)
 				{
 				if($water>240)
@@ -210,7 +210,7 @@ if (!is_null($events['events']))
 			}
 			}
 			
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
+			if (ereg_replace('[[:space:]]+', '', trim($text)) == "อากาศ"){
 				if($Light < 70)
 				{
 				if($water<240)
@@ -220,7 +220,7 @@ if (!is_null($events['events']))
 			}
 			}
 			
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
+			if (ereg_replace('[[:space:]]+', '', trim($text)) == "อากาศ"){
 				if($Light < 70)
 				{
 				if($water<180)
@@ -230,7 +230,7 @@ if (!is_null($events['events']))
 			}
 			}
 			
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
+			if (ereg_replace('[[:space:]]+', '', trim($text)) == "อากาศ"){
 				if($Light < 70)
 				{
 				if($water<140)
@@ -240,7 +240,7 @@ if (!is_null($events['events']))
 			}
 			}
 			
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
+			if (ereg_replace('[[:space:]]+', '', trim($text)) == "อากาศ"){
 				if($Light < 70)
 				{
 				if($water<100)
@@ -251,7 +251,7 @@ if (!is_null($events['events']))
 			}
 			
 			
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
+			if (ereg_replace('[[:space:]]+', '', trim($text)) == "อากาศ"){
 				if($Light < 30)
 				{
 				if($water>240)
@@ -261,7 +261,7 @@ if (!is_null($events['events']))
 			}
 			}
 			
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
+			if (ereg_replace('[[:space:]]+', '', trim($text)) == "อากาศ"){
 				if($Light < 30)
 				{
 				if($water<240)
@@ -271,7 +271,7 @@ if (!is_null($events['events']))
 			}
 			}
 			
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
+			if (ereg_replace('[[:space:]]+', '', trim($text)) == "อากาศ"){
 				if($Light < 30)
 				{
 				if($water<180)
@@ -281,7 +281,7 @@ if (!is_null($events['events']))
 			}
 			}
 			
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
+			if (ereg_replace('[[:space:]]+', '', trim($text)) == "อากาศ"){
 				if($Light < 30)
 				{
 				if($water<140)
@@ -292,7 +292,7 @@ if (!is_null($events['events']))
 			}
 			
 			
-			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "WEATHER"){
+			if (ereg_replace('[[:space:]]+', '', trim($text)) == "อากาศ"){
 				if($Light < 30)
 				{
 				if($water<100)
@@ -318,7 +318,7 @@ if (!is_null($events['events']))
 				$messages = ['type' => 'text', 'text' => "เป็นมหาวิทยาลัยของรัฐ และอยู่ในกำกับของรัฐบาลที่ได้รับพระมหากรุณาธิคุณจากพระบาทสมเด็จพระเจ้าอยู่หัว พระราชทานชื่ออันเป็นสร้อยพระนามในสมเด็จพระเจ้าลูกเธอ เจ้าฟ้าจุฬาภรณวลัยลักษณ์อัครราชกุมารี" ."\n"."อ่านเพิ่มเติม: https://www.wu.ac.th"];
 			}
 				
-			if ( ereg_replace('[[:space:]]+', '', trim($text)) == "photo")
+			if ( ereg_replace('[[:space:]]+', '', trim($text)) == "ภาพ")
 			{
 				$rs = pg_query($dbconn, $sqlgetlastrecord) or die("Cannot execute query: $query\n");
 				$templink = "";
@@ -330,7 +330,7 @@ if (!is_null($events['events']))
 			}
 
 			$textSplited = split(" ", $text);
-			if ($textSplited[0] == "photo")
+			if ($textSplited[0] == "ภาพ")
 			{
 				$dataFromshowtime = showtime($textSplited[1]);
 				$rs = pg_query($dbconn, $dataFromshowtime[1]) or die("Cannot execute query: $query\n");
