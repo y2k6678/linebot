@@ -330,7 +330,7 @@ if (!is_null($events['events']))
 			}
 
 			$textSplited = split(" ", $text);
-			if ($textSplited[0] == "ภาพ")
+			if ( ereg_replace('[[:space:]]+', '', trim($textSplited[0])) == "ภาพ")
 			{
 				$dataFromshowtime = showtime($textSplited[1]);
 				$rs = pg_query($dbconn, $dataFromshowtime[1]) or die("Cannot execute query: $query\n");
