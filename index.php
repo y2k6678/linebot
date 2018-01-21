@@ -328,13 +328,13 @@ if (!is_null($events['events']))
 				}
 				$messages = ['type' => 'image', 'originalContentUrl' => $templink, 'previewImageUrl' => $templink];
 			}
-			$ws= ((split(" ", $temptext)).count())-1;
-$temptext = trim($text);
+			$ws= split(" ", $temptext).count()-1;
+$temptext = trim($text,' ');
 			$textSplited = split(" ", $temptext);
 			if ( ereg_replace('[[:space:]]+', '', trim($textSplited[0])) == "ภาพ")
 			{
-				$dataFromshowtime = showtime($textSplited[$ws]);
-				$rs = pg_query($dbconn, $dataFromshowtime[$ws]) or die("Cannot execute query: $query\n");
+				$dataFromshowtime = showtime($textSplited[1]);
+				$rs = pg_query($dbconn, $dataFromshowtime[1]) or die("Cannot execute query: $query\n");
 				$templink = ""; 
 				$qcount=0;
 				while ($row = pg_fetch_row($rs))
@@ -351,7 +351,7 @@ $temptext = trim($text);
 				// 	'previewImageUrl' => $templink
 
 				// ];
-				$messages = ['type' => 'text', 'text' => "$trim($text) $temptext ($textSplited[0]$textSplited[$ws])"];
+				$messages = ['type' => 'text', 'text' => "$ws"];
 				
 			}
 				else {
