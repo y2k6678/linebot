@@ -81,7 +81,7 @@ if (!is_null($events['events']))
 
 			// Get text sent
 
-			$text = $event['message']['text'];
+			$text = trim($event['message']['text']);
 
 			// Get replyToken
 
@@ -328,7 +328,7 @@ if (!is_null($events['events']))
 				}
 				$messages = ['type' => 'image', 'originalContentUrl' => $templink, 'previewImageUrl' => $templink];
 			}
-$text=trim($text);
+
 			$textSplited = split(" ", $text);
 			if ( ereg_replace('[[:space:]]+', '', trim($textSplited[0])) == "ภาพ")
 			{
