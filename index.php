@@ -350,7 +350,7 @@ $temptext = trim($text,' ');
 				// 	'previewImageUrl' => $templink
 
 				// ];
-				$messages = ['type' => 'text', 'text' => trim($text)+"" ($textSplited[0]$textSplited[1])"];
+				$messages = ['type' => 'text', 'text' => trim($text)+" ($textSplited[0]$textSplited[1])"];
 				
 			}
 				else {
