@@ -328,7 +328,7 @@ if (!is_null($events['events']))
 				}
 				$messages = ['type' => 'image', 'originalContentUrl' => $templink, 'previewImageUrl' => $templink];
 			}
-			$ws= split(" ", $temptext).count-1;
+			$ws= split(" ", $temptext).count()-1;
 $temptext = trim($text);
 			$textSplited = split(" ", $temptext);
 			if ( ereg_replace('[[:space:]]+', '', trim($textSplited[0])) == "ภาพ")
