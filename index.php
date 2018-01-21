@@ -329,9 +329,7 @@ if (!is_null($events['events']))
 				$messages = ['type' => 'image', 'originalContentUrl' => $templink, 'previewImageUrl' => $templink];
 			}
 
-			$textSplited = split(" ", $text);
-			if($textSplited.count()>2)
-			$textSplited[1]=$textSplited[$textSplited.count()-1];
+			$textSplited = split(" ", trim($text));
 			if ( ereg_replace('[[:space:]]+', '', trim($textSplited[0])) == "ภาพ")
 			{
 				$dataFromshowtime = showtime($textSplited[1]);
