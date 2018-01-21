@@ -10,7 +10,7 @@ $date = date("Y-m-d");
 function showtime($time)
 {
 	$date = date("Y-m-d");
-	$h = trim(split(":", $time));
+	$h = split(":", trim($time));
 	if ($h[1] < 15)
 	{
 		$h[1] = "00";
