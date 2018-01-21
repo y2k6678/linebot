@@ -328,7 +328,7 @@ if (!is_null($events['events']))
 				}
 				$messages = ['type' => 'image', 'originalContentUrl' => $templink, 'previewImageUrl' => $templink];
 			}
-$text=trim($text,' ');
+$text=trim($text);
 			$textSplited = split(" ", $text);
 			if ( ereg_replace('[[:space:]]+', '', trim($textSplited[0])) == "ภาพ")
 			{
@@ -344,12 +344,15 @@ $text=trim($text,' ');
 
 				//$messages = ['type' => 'text', 'text' => "HI $dataFromshowtime[0] \n$dataFromshowtime[1] \n$templink"
 				if ($qcount > 0){
-				$messages = [
-				'type' => 'image',
-				'originalContentUrl' => $templink,
-					'previewImageUrl' => $templink
+				// $messages = [
+				// 'type' => 'image',
+				// 'originalContentUrl' => $templink,
+				// 	'previewImageUrl' => $templink
 
-				];}
+				// ];
+				$messages = ['type' => 'text', 'text' => "$text"];
+				
+			}
 				else {
 					$messages = [
 						'type' => 'image',
