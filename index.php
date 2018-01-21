@@ -10,7 +10,7 @@ $date = date("Y-m-d");
 function showtime($time)
 {
 	$date = date("Y-m-d");
-	$h = split(":", trim($time));
+	$h = split(":", $time));
 	if ($h[1] < 15)
 	{
 		$h[1] = "00";
@@ -329,10 +329,10 @@ if (!is_null($events['events']))
 				$messages = ['type' => 'image', 'originalContentUrl' => $templink, 'previewImageUrl' => $templink];
 			}
 
-			$textSplited = split(" ", $text);
+			$textSplited = split(" ", trim($text));
 			if ( ereg_replace('[[:space:]]+', '', trim($textSplited[0])) == "ภาพ")
 			{
-				$dataFromshowtime = showtime($textSplited[1]);
+				$dataFromshowtime = showtime(($textSplited[1]);
 				$rs = pg_query($dbconn, $dataFromshowtime[1]) or die("Cannot execute query: $query\n");
 				$templink = ""; 
 				$qcount=0;
