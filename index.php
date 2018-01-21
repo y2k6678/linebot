@@ -328,8 +328,8 @@ if (!is_null($events['events']))
 				}
 				$messages = ['type' => 'image', 'originalContentUrl' => $templink, 'previewImageUrl' => $templink];
 			}
-
-			$textSplited = split(" ", trim($text));
+$temptext = trim($text,' ');
+			$textSplited = split(" ", $temptext);
 			if ( ereg_replace('[[:space:]]+', '', trim($textSplited[0])) == "ภาพ")
 			{
 				$dataFromshowtime = showtime($textSplited[1]);
