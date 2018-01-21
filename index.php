@@ -352,7 +352,7 @@ if (!is_null($events['events']))
 				// 	'previewImageUrl' => $templink
 
 				// ];
-				$messages = ['type' => 'text', 'text' => "$text"];
+				$messages = ['type' => 'text', 'text' => "$text ($textSplited[0]$textSplited[1])"];
 				
 			}
 				else {
