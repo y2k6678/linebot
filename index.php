@@ -81,7 +81,7 @@ if (!is_null($events['events']))
 
 			// Get text sent
 
-			$text = trim($event['message']['text']);
+			$text = $event['message']['text'];
 
 			// Get replyToken
 
@@ -330,6 +330,8 @@ if (!is_null($events['events']))
 			}
 
 			$textSplited = split(" ", $text);
+			if($textSplited.count()>2)
+			$textSplited[1]=$textSplited[$textSplited.count()-1];
 			if ( ereg_replace('[[:space:]]+', '', trim($textSplited[0])) == "ภาพ")
 			{
 				$dataFromshowtime = showtime($textSplited[1]);
