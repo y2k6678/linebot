@@ -345,13 +345,12 @@ $temptext = trim($text,' ');
 
 				//$messages = ['type' => 'text', 'text' => "HI $dataFromshowtime[0] \n$dataFromshowtime[1] \n$templink"
 				if ($qcount > 0){
-				// $messages = [
-				// 'type' => 'image',
-				// 'originalContentUrl' => $templink,
-				// 	'previewImageUrl' => $templink
+				 $messages = [
+				 'type' => 'image',
+				 'originalContentUrl' => $templink,
+				 	'previewImageUrl' => $templink
 
-				// ];
-				$messages = ['type' => 'text', 'text' => "$textSplited[$ws]"];
+				 ];
 				
 			}
 				else {
