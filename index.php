@@ -6,7 +6,6 @@ $pass = "e10240d71df70c411f5201bc37491e9091491ff276b8d8b66f8e507ea5b7dc22";
 $db = "dcv361109jo6fh";
 date_default_timezone_set("Asia/Bangkok");
 $date = date("Y-m-d");
-
 function showtime($time)
 {
 	$date = date("Y-m-d");
@@ -35,70 +34,45 @@ function showtime($time)
 		$selectbydate = "select * from weatherstation where \"DATETIME\" BETWEEN '$date $h[0]:45:01' and '$date $h[0]:59:59' order by \"DATETIME\" desc limit 1";
 	}
 	
-
 	return array(
 		$h[0] . ":" . $h[1],
 		$selectbydate
 	);
 }
-
 // database
-
 $dbconn = pg_connect("host=" . $GLOBALS['host'] . " port=5432 dbname=" . $GLOBALS['db'] . " user=" . $GLOBALS['user'] . " password=" . $GLOBALS['pass']) or die('Could not connect: ' . pg_last_error());
-
 // Get POST body content
-
 $content = file_get_contents('php://input');
-
 // Parse JSON
-
 $events = json_decode($content, true);
-
 // Validate parsed JSON data
-
 $Light = file_get_contents('https://api.thingspeak.com/channels/331361/fields/3/last.txt');
 $water = file_get_contents('https://api.thingspeak.com/channels/331361/fields/4/last.txt');
 $HUM = file_get_contents('https://api.thingspeak.com/channels/331361/fields/2/last.txt');
 $TEM = file_get_contents('https://api.thingspeak.com/channels/331361/fields/1/last.txt');
 $aba = ('https://i.imgur.com//yuRTcoH.jpg');
-
 // convert
-
 $sqlgetlastrecord = "select * from weatherstation order by \"DATETIME\" desc limit 1";
-
 if (!is_null($events['events']))
 {
-
 	// Loop through each event
-
 	foreach($events['events'] as $event)
 	{
-
 		// Reply only when message sent is in 'text' format
-
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text')
 		{
-
 			// Get text sent
-
 			$text = $event['message']['text'];
-
 			// Get replyToken
-
 			$replyToken = $event['replyToken'];
-
 			// Build message to reply back
-
 			$messages = ['type' => 'text', 'text' => "ไม่มีคำสั่งที่คุณพิมพ์ "."\n"."พิมพ์ตัวอักษรตามที่กำหนดให้" ."\n" ."\n". "[help] เพื่อดูเมนู" 
-
 			// "text"
-
 			];
 			if (ereg_replace('[[:space:]]+', '', strtoupper($text)) == "HELP")
 			{
 				$messages = ['type' => 'text', 'text' => "พิมพ์ตัวอักษรตามที่กำหนดให้"."\n"."\n"."[Info] เพื่อดูข้อมูลสถานที่"."\n"."[อากาศ] เพื่อดูสถานะอากาศปัจจุบัน" . "\n"  . "[ภาพ] เพื่อดูภาพล่าสุด"."\n"."[ภาพ 00:00] พิมพ์ภาพตามด้วยเวลา"."\n"."#อุปกรณ์จะถ่ายรูปทุกๆ 15 นาที"];
 			}
-
 			//BeginCase
 			if (ereg_replace('[[:space:]]+', '', trim($text)) == "อากาศ"){
 				if($Light > 100)
@@ -303,12 +277,10 @@ if (!is_null($events['events']))
 			}
 			
 			//EndCase
-
 			if (trim(strtoupper($text)) == "HI")
 			{
 				$messages = ['type' => 'text', 'text' => "hello"];
 			}
-
 			if ($text == "รูป")
 			{
 				$messages = ['type' => 'image', 'originalContentUrl' => "https://sv6.postjung.com/picpost/data/184/184340-1-2995.jpg", 'previewImageUrl' => "https://sv6.postjung.com/picpost/data/184/184340-1-2995.jpg"];
@@ -328,12 +300,10 @@ if (!is_null($events['events']))
 				}
 				$messages = ['type' => 'image', 'originalContentUrl' => $templink, 'previewImageUrl' => $templink];
 			}
-			$ws= count(split(" ", $text))-1;
-$temptext = trim($text,' ');
-			$textSplited = split(" ", $temptext);
+			$textSplited = split(" ", $text);
 			if ( ereg_replace('[[:space:]]+', '', trim($textSplited[0])) == "ภาพ")
 			{
-				$dataFromshowtime = showtime($textSplited[$ws]);
+				$dataFromshowtime = showtime($textSplited[1]);
 				$rs = pg_query($dbconn, $dataFromshowtime[1]) or die("Cannot execute query: $query\n");
 				$templink = ""; 
 				$qcount=0;
@@ -342,17 +312,13 @@ $temptext = trim($text,' ');
 					$templink = $row[1];
 					$qcount++;
 				}
-
 				//$messages = ['type' => 'text', 'text' => "HI $dataFromshowtime[0] \n$dataFromshowtime[1] \n$templink"
 				if ($qcount > 0){
-				 $messages = [
-				 'type' => 'image',
-				 'originalContentUrl' => $templink,
-				 	'previewImageUrl' => $templink
-
-				 ];
-				
-			}
+				$messages = [
+				'type' => 'image',
+				'originalContentUrl' => $templink,
+					'previewImageUrl' => $templink
+				];}
 				else {
 					$messages = [
 						'type' => 'image',
@@ -360,11 +326,8 @@ $temptext = trim($text,' ');
 							'previewImageUrl' => "https://imgur.com/aOWIijh.jpg" 
 		
 						];
-
 				}
-
 			}
-
 			if ($text == "ภาพ")
 			{
 				$rs = pg_query($dbconn, $sqlgetlastrecord) or die("Cannot execute query: $query\n");
@@ -373,7 +336,6 @@ $temptext = trim($text,' ');
 				{
 					$templink = $row[1];
 				}
-
 				$messages = ['type' => 'image', 'originalContentUrl' => $templink, 'previewImageUrl' => $templink];
 			}
 			if ($text == "map")
@@ -381,8 +343,6 @@ $temptext = trim($text,' ');
 				$messages = ['type' => 'location','title'=> 'my location','address'=> 'เคลิ้ม',
 				'latitude'=> 8.652311,'longitude'=> 99.918031];
 			}
-
-
 			/*if($text == "image"){
 			$messages = [
 			$img_url = "http://sand.96.lt/images/q.jpg";
@@ -390,9 +350,7 @@ $temptext = trim($text,' ');
 			$response = $bot->replyMessage($event->getReplyToken(), $outputText);
 			];
 			}*/
-
 			// Make a POST Request to Messaging API to reply to sender
-
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = ['replyToken' => $replyToken, 'messages' => [$messages], ];
 			$post = json_encode($data);
@@ -412,7 +370,5 @@ $temptext = trim($text,' ');
 		}
 	}
 }
-
 echo "OK";
 echo $date;
-
